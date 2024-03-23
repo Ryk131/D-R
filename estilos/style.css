@@ -51,10 +51,10 @@ nav {
 
 nav > a {
     font-family: var(--fonte2);
-    font-size: 1.4em;
+    font-size: 1.3em;
     text-decoration: none;
     color: white;
-    padding: 12px;
+    padding: 8px;
     border-radius: 5px;
     transition: 0.5s;
 }
