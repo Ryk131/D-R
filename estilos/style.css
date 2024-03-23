@@ -71,11 +71,11 @@ nav > a:hover {
 }
 
 #imagem1 {
-    background-image: url('../imagens/img05red.jpeg');
+    background-image: url('../imagens/img10red.jpeg');
 }
 
 #imagem2 {
-    background-image: url('../imagens/img10red.jpeg');
+    background-image: url('../imagens/img05red.jpeg');
 }
 
 .imagem {
@@ -84,6 +84,7 @@ nav > a:hover {
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
+    width: 100vw;
 }
 
 .imagem > p#dizeres {
@@ -95,4 +96,45 @@ nav > a:hover {
     margin-bottom: 15vh;
     background-color: rgba(0, 0, 0, 0.199);
 }
+
+.texto {
+    padding: 30px;
+    text-align: center;
+}
+
+.texto > h2 {
+    font-family: var(--fonte3);
+    font-size: 1.5em;
+    color: var(--cor5);
+    font-weight: normal;
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+}
+
+.texto > article > div > p {
+    font-family: var(--fonte2);
+    font-size: 1.3em;
+    margin-top: 15px;
+    display: block;
+}
+
+#texto01 {
+    width: 40vw;
+    float: left;
+}
+
+#img01-texto {
+    margin-top: 20px;
+    margin-left: 13px;
+}
+
+#texto01 {
+    width: 40vw;
+}
+
+#img01-texto {
+    display: block;
+    float: left;
+}
+
+
 
