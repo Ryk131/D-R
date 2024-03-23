@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'normal';
+    src: url('../fontes/StintUltraCondensed-Regular.ttf') format(truetype);
+}
+
+@font-face {
+    font-family: 'pacifico regular';
+    src: url('../fontes/Pacifico-Regular.ttf') format(truetype);
+}
+
+@font-face {
+    font-family: 'angelia beauty';
+    src: url('../fontes/Angelia\ Beauty.ttf') format(truetype);
+}
+
+:root {
+    --fonte1: 'angelia beauty';
+    --fonte2: 'normal';
+    --fonte3: 'pacifico regular';
+    --cor1: #D789D9;
+    --cor2: #A260BF;
+    --cor3: #6C3873;
+    --cor4: #7A4572;
+    --cor5: #995395;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    padding: 5px;
+    text-align: center;
+    background-image: linear-gradient(to bottom, var(--cor1), var(--cor3));
+}
+
+header > h1 {
+    font-family: var(--fonte1);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.856);
+    font-size: 3em;
+    margin-bottom: 18px;
+}
+
+nav {
+    margin-bottom: 15px;
+}
+
+nav > a {
+    font-family: var(--fonte2);
+    font-size: 1.4em;
+    text-decoration: none;
+    color: white;
+    padding: 12px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+nav > a#bl_msg {
+    display: block;
+    margin: auto;
+    width: 168px;
+    margin-top: 10px;
+}
+
+nav > a:hover {
+    background-color: var(--cor4);
+}
+
+#imagem1 {
+    background-image: url('../imagens/img05red.jpeg');
+    height: 640px;
+}
+
+#imagem2 {
+    background-image: url('../imagens/img10red.jpeg');
+    height: 640px;
+}
+
+.imagem {
+    text-align: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.imagem > p#dizeres {
+    display: inline-block;
+    color: white;
+    margin: auto;
+    width: 50vw;
+    margin-top:15vh;
+    background-color: rgba(0, 0, 0, 0.199);
+}
+
