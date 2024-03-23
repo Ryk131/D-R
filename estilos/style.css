@@ -72,12 +72,10 @@ nav > a:hover {
 
 #imagem1 {
     background-image: url('../imagens/img05red.jpeg');
-    height: 640px;
 }
 
 #imagem2 {
     background-image: url('../imagens/img10red.jpeg');
-    height: 640px;
 }
 
 .imagem {
@@ -93,6 +91,7 @@ nav > a:hover {
     margin: auto;
     width: 50vw;
     margin-top:15vh;
+    margin-bottom: 15vh;
     background-color: rgba(0, 0, 0, 0.199);
 }
 
