@@ -113,7 +113,7 @@ nav > a:hover {
 
 .texto > article > div > p {
     font-family: var(--fonte2);
-    font-size: 1.1em;
+    font-size: 0.8em;
     margin-top: 15px;
     display: block;
     text-align: justify;
