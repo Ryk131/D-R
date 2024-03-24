@@ -47,6 +47,7 @@ header > h1 {
 
 nav {
     margin-bottom: 5px;
+    width: 100vw;
 }
 
 nav > a {
@@ -115,10 +116,11 @@ nav > a:hover {
     font-size: 1.1em;
     margin-top: 15px;
     display: block;
+    text-align: justify;
 }
 
 #texto01 {
-    width: 40vw;
+    width: 30vw;
     float: left;
 }
 
