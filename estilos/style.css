@@ -112,7 +112,7 @@ nav > a:hover {
 
 .texto > article > div > p {
     font-family: var(--fonte2);
-    font-size: 1.3em;
+    font-size: 1.1em;
     margin-top: 15px;
     display: block;
 }
@@ -127,13 +127,13 @@ nav > a:hover {
     margin-left: 13px;
 }
 
-#texto01 {
+#texto02 {
     width: 40vw;
+    float: right;
 }
 
-#img01-texto {
+#img02-texto {
     display: block;
-    float: left;
 }
 
 
