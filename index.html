@@ -35,7 +35,7 @@
                 </div>
             </article>
         </section>
-        <section class="imagem" id="imagem1">
+        <section class="imagem" id="imagem1" onload="checkBrowser()">
             <p id="dizeres">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint voluptates esse recusandae dolore suscipit hic omnis incidunt, a voluptas aliquid fuga debitis corporis? Quod, earum? Dicta vero dolorem neque voluptatibus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, neque possimus impedit, sint quaerat rem fugiat consectetur nobis quas temporibus qui et commodi ipsam </p>
         </section>
         <section id="local">
@@ -50,5 +50,46 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab iure neque provident tempora et, consequuntur excepturi! Temporibus tenetur nam libero. Numquam, veniam. Sapiente voluptas in eveniet cumque atque ea explicabo. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non a similique minima aut labore voluptatum enim, deleniti officia recusandae alias tenetur modi illum nihil ea est eligendi inventore animi eaque?</p>
         </section>
     </main>
+    <script>
+        function checkBrowser() {
+          
+            // Get the user-agent string
+            let userAgentString = 
+                navigator.userAgent;
+          
+            // Detect Firefox
+            let firefoxAgent = 
+                userAgentString.indexOf("Firefox") > -1;
+          
+            // Detect Safari
+            let safariAgent = 
+                userAgentString.indexOf("Safari") > -1;
+                  
+            // Discard Safari since it also matches Chrome
+            if ((chromeAgent) && (safariAgent)) 
+                safariAgent = false;
+          
+            // Detect Opera
+            let operaAgent = 
+                userAgentString.indexOf("OP") > -1;
+                  
+            // Discard Chrome since it also matches Opera     
+            if ((chromeAgent) && (operaAgent)) 
+                chromeAgent = false;
+
+            if (safariAgent == true) {
+                alert("AAAA");
+            }
+          
+            document.querySelector(".output-safari").textContent
+                        = safariAgent;
+            document.querySelector(".output-ie").textContent
+                        = IExplorerAgent;
+            document.querySelector(".output-opera").textContent
+                        = operaAgent;
+            document.querySelector(".output-firefox").textContent
+                        = firefoxAgent;
+        }
+    </script>
 </body>
 </html>
