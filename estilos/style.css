@@ -120,18 +120,21 @@ nav > a:hover {
 }
 
 #texto01 {
-    width: 30vw;
+    width: 60vw;
     float: left;
+    margin-bottom: 10px;
 }
 
 #img01-texto {
-    margin-top: 20px;
-    margin-left: 13px;
+    margin-top: 17px;
+    margin-left: 0px;
 }
 
 #texto02 {
-    width: 40vw;
+    width: 60vw;
     float: right;
+    margin-right: 10px;
+    margin-top: -1px;
 }
 
 #img02-texto {
