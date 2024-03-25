@@ -103,7 +103,7 @@ nav > a:hover {
     text-align: center;
 }
 
-.texto > h2 {
+.texto > h2, section > h2 {
     font-family: var(--fonte3);
     font-size: 1.5em;
     color: var(--cor5);
@@ -127,6 +127,11 @@ nav > a:hover {
 
 #img01-texto, #img02-texto {
     display: inline-block;
+}
+
+#local, #msg {
+    padding: 30px;
+    text-align: center;
 }
 
 
