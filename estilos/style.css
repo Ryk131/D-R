@@ -109,6 +109,7 @@ nav > a:hover {
     color: var(--cor5);
     font-weight: normal;
     background-image: linear-gradient(to right, var(--cor1), transparent);
+    border-radius: 4px;
 }
 
 .texto > article > div > p {
@@ -119,27 +120,15 @@ nav > a:hover {
     text-align: justify;
 }
 
-#texto01 {
-    width: 60vw;
-    float: left;
-    margin-bottom: 10px;
+#texto01, #texto02 {
+    display: inline-block;
+    width: 40vw;
 }
 
-#img01-texto {
-    margin-top: 17px;
-    margin-left: 0px;
+#img01-texto, #img02-texto {
+    display: inline-block;
 }
 
-#texto02 {
-    width: 60vw;
-    float: right;
-    margin-right: 10px;
-    margin-top: -1px;
-}
-
-#img02-texto {
-    display: block;
-}
 
 
 
