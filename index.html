@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D & R</title>
+    <title>D & Ra</title>
     <link rel="stylesheet" href="estilos/style.css">
 </head>
 <body>
@@ -35,7 +35,7 @@
                 </div>
             </article>
         </section>
-        <section class="imagem" id="imagem1" onload="checkBrowser()">
+        <section class="imagem" id="imagem1">
             <p id="dizeres">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint voluptates esse recusandae dolore suscipit hic omnis incidunt, a voluptas aliquid fuga debitis corporis? Quod, earum? Dicta vero dolorem neque voluptatibus. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, neque possimus impedit, sint quaerat rem fugiat consectetur nobis quas temporibus qui et commodi ipsam </p>
         </section>
         <section id="local">
@@ -51,8 +51,21 @@
         </section>
     </main>
     <script>
-        function checkBrowser() {
-          
+
+        let userAgentString = navigator.userAgent;
+
+        let chromeAgent = userAgentString.indexOf("Chrome") > -1;
+        let safariAgent = userAgentString.indexOf("Safari") > -1;
+        if ((chromeAgent) && (safariAgent)) {
+                safariAgent = false;
+            }
+        if (safariAgent == false) {
+            alert("oi");
+        } else {
+            alert("Ai")
+        }
+        function detectaNav() {
+
             // Get the user-agent string
             let userAgentString = 
                 navigator.userAgent;
@@ -66,31 +79,29 @@
                 userAgentString.indexOf("Safari") > -1;
                   
             // Discard Safari since it also matches Chrome
-            if ((chromeAgent) && (safariAgent)) 
+            if ((chromeAgent) && (safariAgent)) {
                 safariAgent = false;
-          
+            }
             // Detect Opera
             let operaAgent = 
                 userAgentString.indexOf("OP") > -1;
                   
             // Discard Chrome since it also matches Opera     
-            if ((chromeAgent) && (operaAgent)) 
+            if ((chromeAgent) && (operaAgent)) {
                 chromeAgent = false;
-
-            if (safariAgent == true) {
-                alert("AAAA");
-            } else {
-                alert("OOO");
             }
+            
+            
+            
           
-            document.querySelector(".output-safari").textContent
-                        = safariAgent;
-            document.querySelector(".output-ie").textContent
-                        = IExplorerAgent;
-            document.querySelector(".output-opera").textContent
-                        = operaAgent;
-            document.querySelector(".output-firefox").textContent
-                        = firefoxAgent;
+            //document.querySelector(".output-safari").textContent
+                        //= safariAgent;
+            //document.querySelector(".output-ie").textContent
+                        //= IExplorerAgent;
+            //document.querySelector(".output-opera").textContent
+                        //= operaAgent;
+            //document.querySelector(".output-firefox").textContent
+             //           = firefoxAgent;
         }
     </script>
 </body>
