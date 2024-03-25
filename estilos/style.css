@@ -73,10 +73,16 @@ nav > a:hover {
 
 #imagem1 {
     background-image:  url('../imagens/img10red.jpeg');
+    height:100%;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 #imagem2 {
     background-image: url('../imagens/img05red.jpeg');
+    height:100%;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 
 .imagem {
@@ -87,6 +93,7 @@ nav > a:hover {
     background-position: center center;
     width: 100vw;
     height: 100%;
+    overflow: hidden;
 }
 
 .imagem > p#dizeres {
