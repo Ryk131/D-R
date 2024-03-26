@@ -31,6 +31,10 @@
     margin: 0px;
 }
 
+body {
+    width: 100vw;
+}
+
 header {
     padding: 5px;
     text-align: center;
