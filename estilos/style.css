@@ -157,8 +157,8 @@ nav > a:hover {
 #link-paraiso {
     display: block;
     margin: auto;
-    width: 180px;
-    font-size: 1.5em;
+    width: 25vw;
+    font-size: 1.8em;
     font-family: var(--fonte2);
     text-decoration: none;
     color: white;
