@@ -31,7 +31,7 @@
     margin: 0px;
 }
 
-body {
+html, body {
     width: 100vw;
 }
 
@@ -180,10 +180,6 @@ nav > a:hover {
     font-size: 1em;
     text-align: center ;
     font-family: var(--fonte3);
-}
-
-#par-maps > iframe {
-    margin: auto;
 }
 
 #logo-maps, #logo-waze {
