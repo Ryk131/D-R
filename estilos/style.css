@@ -142,6 +142,32 @@ nav > a:hover {
     text-align: center;
 }
 
+#imglc {
+    margin: auto;
+    display: block;
+    width: 70vw;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#link-paraiso {
+    display: block;
+    margin: auto;
+    width: 110px;
+    height: 18px;
+    font-size: 1em;
+    font-family: var(--fonte2);
+    text-decoration: none;
+    color: white;
+    background-color: var(--cor2);
+    border-radius: 5px;
+}
+
+#link-paraiso:hover {
+    background-color: var(--cor1);
+}
+
+
 
 
 
