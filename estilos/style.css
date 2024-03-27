@@ -37,7 +37,6 @@ html, body {
 }
 
 header {
-    width: 100vw;
     padding: 5px;
     text-align: center;
     background-image: linear-gradient(to bottom, var(--cor1), var(--cor3));
