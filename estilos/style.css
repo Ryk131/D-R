@@ -186,17 +186,9 @@ nav > a:hover {
 }
 
 #logo-maps, #logo-waze {
-    display: block;
+    display: inline;
     margin: auto;
     margin-top: 20px;
-}
-
-#logo-maps{
-    width: 135px;
-}
-
-#logo-waze{
-    width: 155px;
 }
 
 #logo-link {
