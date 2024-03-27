@@ -121,19 +121,24 @@ nav > a:hover {
 
 .texto > article > div > p {
     font-family: var(--fonte2);
-    font-size: 0.8em;
+    font-size: 0.9em;
     margin-top: 15px;
+    margin-bottom: 5px;
     display: block;
     text-align: justify;
 }
 
 #texto01, #texto02 {
     display: inline-block;
-    width: 40vw;
+    width: 55vw;
 }
 
 #img01-texto, #img02-texto {
-    display: inline-block;
+    display: inline;
+}
+
+#img01-texto {
+
 }
 
 #local, #msg {
