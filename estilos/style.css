@@ -107,6 +107,11 @@ nav > a:hover {
 
 .texto {
     width: 100vw;
+    padding: 10px;
+}
+
+.texto > h2 {
+    text-align: center;
 }
 
 .texto > h2, section > h2 {
@@ -120,7 +125,7 @@ nav > a:hover {
 
 .texto > article > div > p {
     font-family: var(--fonte2);
-    font-size: 0.9em;
+    font-size: 1em;
     margin-top: 15px;
     margin-bottom: 5px;
 }
