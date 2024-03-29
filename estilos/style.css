@@ -126,6 +126,7 @@ nav > a:hover {
     margin-bottom: 5px;
     display: block;
     text-align: justify;
+    
 }
 
 #texto01, #texto02 {
@@ -133,7 +134,7 @@ nav > a:hover {
     width: 55vw;
 }
 
-#img01-texto, #img02-texto {
+#img01-texto, #img02-texto,#img03-texto {
     display: inline;
 }
 
