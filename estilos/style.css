@@ -15,10 +15,16 @@
     src: url('../fontes/Angelia\ Beauty.ttf') format(truetype);
 }
 
+@font-face {
+    font-family: 'courgete regular';
+    src: url('../fontes/Courgette-Regular.ttf') format(truetype);
+}
+
 :root {
     --fonte1: 'angelia beauty';
     --fonte2: 'normal';
     --fonte3: 'pacifico regular';
+    --fonte4: 'courgete regular';
     --cor1: #D789D9;
     --cor2: #A260BF;
     --cor3: #6C3873;
@@ -124,19 +130,24 @@ nav > a:hover {
 }
 
 .texto > article > div > p {
-    font-family: var(--fonte2);
+    font-family: var(--fonte4);
     font-size: 1em;
-    margin-top: 15px;
-    margin-bottom: 5px;
+    text-align: justify;
 }
 
 #texto01, #texto02 {
-    display: inline-block;
-    width: 55vw;
+    width: 85vw;
+    padding: 10px;
 }
 
-#img01-texto, #img02-texto,#img03-texto {
-    display: inline;
+#img01-texto {
+    float: right;
+    margin-left: 8px;
+}
+
+#img02-texto {
+    float: left;
+    margin-right: 8px;
 }
 
 #local, #msg {
