@@ -111,17 +111,13 @@ nav > a:hover {
     background-color: rgba(0, 0, 0, 0.199);
 }
 
-#n-hist {
-    margin: auto;
-}
-
 .texto {
     width: 100vw;
-    padding: 10px;
 }
 
 .texto > h2 {
     text-align: center;
+    margin: 10px;
 }
 
 .texto > h2, section > h2 {
@@ -140,8 +136,7 @@ nav > a:hover {
 }
 
 #texto01, #texto02 {
-    width: 89vw;
-    padding: 10px;
+    padding:10px;
 }
 
 #img01-texto {
