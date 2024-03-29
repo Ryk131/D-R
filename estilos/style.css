@@ -111,6 +111,10 @@ nav > a:hover {
     background-color: rgba(0, 0, 0, 0.199);
 }
 
+#n-hist {
+    margin: auto;
+}
+
 .texto {
     width: 100vw;
     padding: 10px;
@@ -136,7 +140,7 @@ nav > a:hover {
 }
 
 #texto01, #texto02 {
-    width: 85vw;
+    width: 88vw;
     padding: 10px;
 }
 
