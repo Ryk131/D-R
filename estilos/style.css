@@ -168,7 +168,7 @@ nav > a:hover {
     border-radius: 5px;
 }
 
-#local, #msg {
+#local {
     padding: 30px;
     text-align: center;
 }
@@ -220,6 +220,10 @@ nav > a:hover {
     display: inline;
     margin: auto;
     margin-top: 20px;
+}
+
+#msg > h2 {
+    text-align: center;
 }
 
 
