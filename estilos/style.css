@@ -135,8 +135,17 @@ nav > a:hover {
     text-align: justify;
 }
 
+#espaco {
+    color: white;
+}
+
 #texto01, #texto02 {
     padding:20px;
+}
+
+#texto02 {
+    margin-top: -18px;
+    margin-bottom: 20px;
 }
 
 #img01-texto {
@@ -148,6 +157,11 @@ nav > a:hover {
 #img02-texto {
     float: left;
     margin-right: 8px;
+}
+
+#img03-texto {
+    float: right;
+    margin-left: 8px;
 }
 
 #local, #msg {
@@ -166,11 +180,10 @@ nav > a:hover {
 #link-paraiso {
     display: inline-block;
     margin: auto;
-    width: 10vw;
-    font-size: 1.8em;
-    font-family: var(--fonte2);
-    text-decoration: none;
+    width: 12vw;
     border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #link-paraiso:hover {
@@ -205,10 +218,7 @@ nav > a:hover {
     margin-top: 20px;
 }
 
-#logo-link {
-    margin-left: 10px;
-    margin-right: 10px;
-}
+
 
 
 
