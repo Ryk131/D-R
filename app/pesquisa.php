@@ -5,8 +5,10 @@ unset($_SESSION['mensagem']);
 
 require_once '../classes/repositorioConvidado.php'; 
     $repositorio = new RepositorioConvidadosMySQL();
-   
+    
     $nome_convidado = $_POST['nome'];
+    
+    
     $nome_convidado = strtoupper($nome_convidado);
     $nome_convidado = ltrim($nome_convidado);
     $nome_convidado = rtrim($nome_convidado);

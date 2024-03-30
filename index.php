@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if(isset($_SESSION['mensagem'])) {
+        $mensagem = $_SESSION['mensagem'];
+    }
     session_destroy();
 ?>
 
@@ -22,6 +25,7 @@
         </nav>
     </header>
     <main>
+        <p style="color: green; margin: 15px"><?php if(isset($mensagem)) { echo $mensagem; } ?></p>
         <section class="texto">
             <h2>Nossa História</h2>
             <article id="n-hist">
@@ -82,7 +86,7 @@
         </section>
         <section id="msg">
             <h2>Deixe uma mensagem para os noivos</h2>
-            <form action="app/mensagem.php" method="post">
+            <form id='form-msgs' action="app/mensagem.php" method="post">
                 <p id="form-nome">
                     <label for="nome">Nome</label>
                     <input type="text" name="nome" id="nome" required placeholder="Seu Nome">

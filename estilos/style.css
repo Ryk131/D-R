@@ -1,5 +1,5 @@
 @charset "UTF-8"; 
-
+ 
 @font-face {
     font-family: 'normal';
     src: url('../fontes/StintUltraCondensed-Regular.ttf') format(truetype);
@@ -227,7 +227,7 @@ nav > a:hover {
     margin: 15px;
 }
 
-form {
+#form-msgs {
     font-family: var(--fonte4);
     padding: 10px;
     margin: 15px;
@@ -236,7 +236,7 @@ form {
     background-image: linear-gradient(to top, var(--cor2), var(--cor5));
     border: 11px double white;
     border-radius: 15px;
-}
+} 
 
 #form-nome, #form-msg, #form-enviar {
     padding: 10px;

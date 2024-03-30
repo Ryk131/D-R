@@ -16,17 +16,7 @@ interface IRepositorioConvidados {
     public function PuxarNomes($nome); 
     public function IsolarConvidado($nome_convidado,$fam_conv);
     public function VerifNumConv($fam_conv);
-    public function EnviarSolicitacao($id_usuario,$id_amg);
-    public function VerificarSolicitacao($id_usuario);
-    public function PegarIdSolicitacoes($id_usuario);
-    public function MostrarInfo($id_usuario);
-    public function ApagarSolicitacao($id_usuario,$id_amg);
-    public function AceitarSolicitacao($id_usuario,$id_amg);
-    public function PegarIdAmg1($id_usuario);
-    public function ListarAmg($id,$id_usuario);
-    public function FicarOnline($id_usuario);
-    public function AlterarStatus($id_usuario,$status);
-
+    public function GuardarMensagem($nome_convidado,$msg_convidado);
 }
  
 class RepositorioConvidadosMySQL implements IRepositorioConvidados
@@ -34,7 +24,7 @@ class RepositorioConvidadosMySQL implements IRepositorioConvidados
     private $conexao; 
     public function __construct()
     {
-        $this->conexao = new Conexao("localhost","root","","r_d");
+        $this->conexao = new Conexao("localhost","root","","d-r");
        
         if($this->conexao->conectar()==false){ 
             echo "Erro de conexao ".mysqli_connect_error(); 
@@ -59,7 +49,7 @@ class RepositorioConvidadosMySQL implements IRepositorioConvidados
     
     public function ListarConvidados()
     {
-        $sql = "SELECT * FROM tbl_convidados";
+        $sql = "SELECT * FROM tbl_convidados ORDER BY nome_convidado ASC";
         $listagem = $this->conexao->executarQuery($sql);
         return $listagem;
     }
@@ -122,69 +112,11 @@ class RepositorioConvidadosMySQL implements IRepositorioConvidados
         return $linha;
     }
 
-    public function EnviarSolicitacao($id_usuario,$id_amg)
+    public function GuardarMensagem($nome_convidado,$msg_convidado)
     {
-        $sql = "INSERT INTO solicitacao_amizade (id,id_usuario,id_amg) VALUES ('','$id_usuario','$id_amg')";
+        $sql = "INSERT INTO mensagens_convidados (nome_convidado,msg_convidado) VALUES ('$nome_convidado','$msg_convidado')";
         $this->conexao->executarQuery($sql);
     }
 
-    public function VerificarSolicitacao($id_usuario)
-    {
-        $sql = "SELECT * FROM solicitacao_amizade WHERE id_amg = '$id_usuario'";
-        $linha = $this->conexao->obtemNumeroLinhas($sql);
-        return $linha;
-    }
-    
-    public function PegarIdSolicitacoes($id_usuario)
-    {
-        $sql = "SELECT * FROM solicitacao_amizade WHERE id_amg = '$id_usuario'";
-        $listagem = $this->conexao->executarQuery($sql);
-        return $listagem;
-    }
-
-    public function MostrarInfo($id_usuario) 
-    {
-        $sql = "SELECT * FROM tbl_usuario WHERE id_usuario = '$id_usuario'";
-        $listagem = $this->conexao->executarQuery($sql);
-        return $listagem;
-    }
-
-    public function ApagarSolicitacao($id_usuario,$id_amg)
-    {
-        $sql = "DELETE FROM solicitacao_amizade WHERE id_amg = '$id_usuario' AND id_usuario = '$id_amg'";
-        $this->conexao->executarQuery($sql);
-    }
-
-    public function AceitarSolicitacao($id_usuario,$id_amg)
-    {
-        $sql = "INSERT INTO tbl_amg (id,id_usuario,id_amigo) VALUES ('','$id_usuario','$id_amg')";
-        $this->conexao->executarQuery($sql);
-    }
-
-    public function PegarIdAmg1($id_usuario)
-    {
-        $sql = "SELECT * FROM tbl_amg WHERE id_usuario = '$id_usuario'";
-        $listagem = $this->conexao->executarQuery($sql);
-        return $listagem;
-    }
-
-    public function ListarAmg($id,$id_usuario)
-    {
-        $sql = "SELECT * FROM tbl_usuario WHERE id_usuario = '$id' AND id_usuario != '$id_usuario'";
-        $listagem = $this->conexao->executarQuery($sql);
-        return $listagem;
-    }
-
-    public function FicarOnline($id_usuario)
-    {
-        $sql = "INSERT INTO tbl_online (id,id_usuario,hora_entrada) VALUES ('','$id_usuario','')";
-        $this->conexao->executarQuery($sql);
-    }
-
-    public function AlterarStatus($id_usuario,$status)
-    {
-        $sql = "UPDATE tbl_usuario SET sessao_status = '$status' WHERE id_usuario = '$id_usuario'";
-        $this->conexao->executarQuery($sql);
-    }
 }
    

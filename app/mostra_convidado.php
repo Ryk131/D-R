@@ -4,7 +4,7 @@
 
 session_start();
 
-if(isset($_SESSION['retira'])){
+if(isset($_SESSION['retira'])){ 
     unset($_SESSION['retira']);
 }
 
@@ -12,7 +12,14 @@ if(isset($_SESSION['retira'])){
 require_once '../classes/repositorioConvidado.php';  
 $repositorio = new RepositorioConvidadosMySQL(); 
 
-$nome_convidado = $_SESSION['nome_convidado'];
+if(isset($_SESSION['nome_convidado'])) {
+    $nome_convidado = $_SESSION['nome_convidado'];
+} else if(isset($_GET['nome'])) {
+    $nome_convidado = $_GET['nome'];
+}
+
+
+
 
 $convidado = $repositorio->MostraConvidado($nome_convidado);
 foreach ($convidado as $key) {
