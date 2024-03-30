@@ -97,7 +97,7 @@ nav > a:hover {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position: center top;
+    background-position: top center;
     width: 100vw;
 }
 
@@ -152,16 +152,19 @@ nav > a:hover {
     float: right;
     margin-left: 8px;
     margin-top: 8px;
+    border-radius: 5px;
 }
 
 #img02-texto {
     float: left;
     margin-right: 8px;
+    border-radius: 5px;
 }
 
 #img03-texto {
     float: right;
     margin-left: 8px;
+    border-radius: 5px;
 }
 
 #local, #msg {
