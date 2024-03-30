@@ -105,10 +105,11 @@ nav > a:hover {
     display: inline-block;
     color: white;
     margin: auto;
-    width: 50vw;
+    width: 70vw;
     margin-top:15vh;
     margin-bottom: 15vh;
     background-color: rgba(0, 0, 0, 0.199);
+    font-size: 1.5em;
 }
 
 .texto {
@@ -220,6 +221,8 @@ nav > a:hover {
     margin: auto;
     margin-top: 20px;
 }
+
+
 
 
 
