@@ -1,3 +1,8 @@
+<?php
+    session_start();
+    session_destroy();
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -12,7 +17,7 @@
         <nav>
             <a href="index.html">Início</a>
             <a href="#">Local e Hora</a>
-            <a href="#">Confirmar Presença</a>
+            <a href="app/pesquisa_convidado.php">Confirmar Presença</a>
             <a href="#" id="bl_msg">Mensagem para os noivos</a>
         </nav>
     </header>
