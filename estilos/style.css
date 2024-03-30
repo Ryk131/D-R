@@ -224,6 +224,48 @@ nav > a:hover {
 
 #msg > h2 {
     text-align: center;
+    margin: 15px;
+}
+
+form {
+    font-family: var(--fonte4);
+    padding: 10px;
+    margin: 15px;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(to top, var(--cor2), var(--cor5));
+    border: 11px double white;
+    border-radius: 15px;
+}
+
+#form-nome, #form-msg, #form-enviar {
+    padding: 10px;
+}
+
+#form-enviar > input {
+    background-color: white;
+    font-family: var(--fonte4);
+    font-size: 1.2em;
+    color: var(--cor1);
+    width: 60px;
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+}
+
+#form-nome > input {
+    border: none;
+}
+
+#form-msg > textarea, #form-nome > input {
+    border-radius: 5px;
+    padding: 5px;
+    font-family: var(--fonte4);
+}
+
+#form-enviar > input:hover {
+    background-color: var(--cor3);
+
 }
 
 

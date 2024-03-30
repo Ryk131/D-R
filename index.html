@@ -35,7 +35,7 @@
                     
                     <p id="texto02">
                         <img id="img02-texto" style="width: 150px;height: 170px" src="imagens/img11.jpeg">
-                        <a id="espaco">///</a>Depois desse primeiro encontro os dois pombinhos foram crescendo, estudaram juntos, se viram na igreja onde a Danielly por mais que negue não tirava os olhos do Rykelmy. Após alguns acontecimentos Rykelmy acabou se mudando e eles perderam o contato por um tempo, se vendo apenas de vez em quando na igreja, mas, eis que uns meses antes de Daniely completar 15 anos de idade surge um interesse, o nada bobo Rykelmy viu a agora linda moça Danielly e se apaixonou, mandou mensagem e após muitas conversas o amor um pelo outro foi crescendo e eis que chega o mês de fevereiro, onde Danielly iria completar 15 anos e com isso implorou para que Rykelmy fosse seu príncipe e ele, claro, aceitou.<br>
+                        <a id="espaco">///</a>Depois desse primeiro encontro os dois pombinhos foram crescendo, estudaram juntos, se viram na igreja e foram aos poucos criando um sentimento um pelo outro. Após alguns acontecimentos Rykelmy acabou se mudando e eles perderam o contato por um tempo, se vendo apenas de vez em quando na igreja, mas, eis que uns meses antes de Daniely completar 15 anos de idade surge um interesse, o nada bobo Rykelmy viu a agora linda moça Danielly e se apaixonou, mandou mensagem e após muitas conversas o amor um pelo outro foi crescendo e eis que chega o mês de fevereiro, onde Danielly iria completar 15 anos e com isso ele acabou sendo o príncipe dela em seu aniversário.<br>
                         <img id="img03-texto" style="width: 150px;height: 170px" src="imagens/img12.jpeg">
                         <a id="espaco">///</a>Após o aniversário de 15 muitas coisas aconteceram, ele errou, se afastou dela, magoou ela, mas Deus ainda não tinha dado um ponto final a essa história de amor, e após 2 anos Deus abriu os caminhos, mexeu nos corações e ele tomou coragem de falar com ela de novo, ela o perdoou, eles passaram a se falar bastante, o interesse foi crescendo cada vez mais e ele não aguentava mais esperar, queria dar logo o próximo passo, com isso eles decidiram buscar a confirmação de Deus, a palavra, assim Deus falou no coração deles, confirmou essa união com a promessa que dela faria uma porta aberta que nada nem ninguém poderia fechar.<br>
                         <a id="espaco">///</a>Depois disso as coisas continuaram caminhando, eles foram se conhecendo mais e mais, se amando mais e mais e agora aqui estamos, prestes a dar o próximo passo nessa linda história de amor
@@ -78,16 +78,16 @@
         <section id="msg">
             <h2>Deixe uma mensagem para os noivos</h2>
             <form action="mensagem.php" method="post">
-                <p>
+                <p id="form-nome">
                     <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome">
+                    <input type="text" name="nome" id="nome" required placeholder="Seu Nome">
                 </p>
 
-                <p>
+                <p id="form-msg">
                     <label for="imsg">Mensagem</label><br>
-                    <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+                    <textarea name="msg" id="imsg" cols="30" rows="10" required placeholder="Digite aqui sua mensagem"></textarea>
                 </p>
-                <p>
+                <p id="form-enviar">
                     <input type="submit" value="Enviar">
                 </p>
             </form>
