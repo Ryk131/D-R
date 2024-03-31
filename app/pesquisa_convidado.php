@@ -37,15 +37,9 @@ $lista_convidados = $repositorio->ListarConvidados();
                 <input id="bt-pesq" type="submit" value=" ">
             </p>
         </form>
-        <div id="img01">
-            
-        </div>
-        <div id="img02">
-
-        </div>
-        <div id="img03">
-
-        </div>
+        <img id="img01" src="../imagens/img02.jpeg" alt="">
+        <img id="img02" src="../imagens/img04.jpeg" alt="">
+        <img id="img03" src="../imagens/img07.jpeg" alt="">
     </main>
     <?php
         if(isset($_SESSION['mensagem'])){

@@ -154,21 +154,24 @@ td {
     top: -1px;
 }
 
-#img01, #img02, #img03 {
-    background-repeat: no-repeat;
-}
-
 #img01 {
-    background-image: url('../imagens/img02.jpeg');
-    
+    width: 480px;
+    height: 560px;
+    margin: 10px;
 }
 
 #img02 {
-    background-image: url('../imagens/img04.jpeg');
+    width: 220px;
+    display: block;
+    height: 240px;
+    float: left;
+    margin: 10px;
 }
 
 #img03 {
-    background-image: url('../imagens/img09.jpeg');
+    width: 220px;
+    display: block;
+    height: 240px;
+    float: right;
+    margin: 10px;
 }
-
-
