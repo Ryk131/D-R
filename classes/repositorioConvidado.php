@@ -40,7 +40,7 @@ class RepositorioConvidadosMySQL implements IRepositorioConvidados
 
     public function CadastraConvidado($Convidado)
     {
-        $nome_convidado = $Convidado->getNomeConvidado();
+        $nome_convidado = $Convidado->getNomeConvidado(); 
 
         $sql = "INSERT INTO tbl_convidados (id_convidado,nome_convidado,doc_convidado,confirm) VALUES ('','$nome_convidado',NULL,NULL)";
         $this->conexao->executarQuery($sql);

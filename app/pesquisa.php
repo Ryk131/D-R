@@ -31,7 +31,8 @@ require_once '../classes/repositorioConvidado.php';
             $nome_convidado = $key['nome_convidado'];
         }
         $_SESSION['nome_convidado'] = $nome_convidado;
-        header('Location: mostra_convidado.php');
+        $_SESSION['mostrar_convidado'] = true;
+        header('Location: pesquisa_convidado.php');
     } else {
         $_SESSION['mensagem'] = "Convidado não encontrado";
         header('Location: pesquisa_convidado.php');

@@ -119,44 +119,9 @@ nav > a:hover {
     cursor:pointer;
 }
 
-#tbl_convidados {
-    margin:10px;
-    background-color: var(--cor1);
-    border-collapse: collapse;
-    width: 96vw;
-    color: white;
-    font-weight: bold;
-}
-
-#link-tbl {
-    text-decoration: none;
-    color: white;
-}
-
-thead > tr > th {
-    border: 2px solid black;
-}
-
-
-td {
-    border: 2px solid black;
-    padding: 7px;
-    text-align: center;
-    vertical-align: middle;
-}
-
-.titulo-tbl {
-    font-family: var(--fonte4);
-    font-size: 1.2em;
-    font-weight: normal;
-    background-color: #804681;
-    position: sticky;
-    top: -1px;
-}
-
 #img01 {
     width: 480px;
-    height: 560px;
+    height: 530px;
     margin: 10px;
 }
 
@@ -175,3 +140,32 @@ td {
     float: right;
     margin: 10px;
 }
+
+#tbl_nomes {
+    margin:10px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+th {
+    background-color: var(--cor);
+}
+
+#tbl_nomes > tbody > tr > td {
+    border: 1px solid black;
+    background-color: var(--cor1);
+    color: white;
+    vertical-align: middle;
+    font-family: var(--fonte4);
+}
+
+#tbl_nomes > tbody > tr > .botao_conf:hover {
+    background-color: var(--cor2);
+}
+
+#tbl_nomes > tbody > tr > td > a {
+    text-decoration: none;
+    color:white;
+}
+
+
