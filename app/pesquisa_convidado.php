@@ -54,45 +54,47 @@ if(isset($_SESSION['nome_convidado'])) {
         if(isset($_SESSION['mostrar_convidado'])) {
             ?>
             <table id="tbl_nomes">
-                <?php
-                $convidado = $repositorio->MostraConvidado($nome_convidado);
+                <tbody>
+                    <?php
+                    $convidado = $repositorio->MostraConvidado($nome_convidado);
 
-                foreach ($convidado as $key) {
-                    $nomes_desc = array();
-                    $nomes_conf = array();
-                    $nomes = $repositorio->PuxarNomes($nome);
-                    foreach ($nomes as $key) {
-                        if($key['confirm'] == NULL || $key['confirm'] == 0){
-                            array_push($nomes_desc,$key['nome_convidado']);
+                    foreach ($convidado as $key) {
+                        $nomes_desc = array();
+                        $nomes_conf = array();
+                        $nomes = $repositorio->PuxarNomes($nome);
+                        foreach ($nomes as $key) {
+                            if($key['confirm'] == NULL || $key['confirm'] == 0){
+                                array_push($nomes_desc,$key['nome_convidado']);
+                            } else {
+                                array_push($nomes_conf,$key['nome_convidado']);
+                            }
+                        }
+                        $tam_c = count($nomes_conf) - 1;
+                        $tam_d = count($nomes_desc) - 1;
+                        if($nomes_conf != NULL){
+                            
                         } else {
-                            array_push($nomes_conf,$key['nome_convidado']);
+                            
+                        }
+                        foreach ($nomes as $key) {
+                            $nome = $key['nome_convidado'];
+                            echo "<tr>";
+                                echo "<td>".$key['nome_convidado']."</td>";
+                                if($key['confirm'] == NULL){
+                                    echo "<td>Não Confirmado</td>";
+                                    echo "<td class='botao_conf'><a href='formulario_confirm.php?nome=$nome'>Confirmar Presença</a></td>";
+                                } else if($key['confirm'] == 1) {
+                                    echo "<td>Confirmado</td>";
+                                    echo "<td class='botao_conf'><a href='formulario_desconfirm.php'>Desconfirmar Presença</a></td>";
+                                } else {
+                                    echo "<td>Desconfirmado</td>";
+                                    echo "<td class='botao_conf'><a href='formulario_confirm.php'>Reconfirmar Presença</a></td>";
+                                }
+                            echo "</tr>";
                         }
                     }
-                    $tam_c = count($nomes_conf) - 1;
-                    $tam_d = count($nomes_desc) - 1;
-                    if($nomes_conf != NULL){
-                        
-                    } else {
-                        
-                    }
-                    foreach ($nomes as $key) {
-                        $nome = $key['nome_convidado'];
-                        echo "<tr>";
-                            echo "<td>".$key['nome_convidado']."</td>";
-                            if($key['confirm'] == NULL){
-                                echo "<td>Não Confirmado</td>";
-                                echo "<td class='botao_conf'><a href='formulario_confirm.php?nome=$nome'>Confirmar Presença</a></td>";
-                            } else if($key['confirm'] == 1) {
-                                echo "<td>Confirmado</td>";
-                                echo "<td class='botao_conf'><a href='formulario_desconfirm.php'>Desconfirmar Presença</a></td>";
-                            } else {
-                                echo "<td>Desconfirmado</td>";
-                                echo "<td class='botao_conf'><a href='formulario_confirm.php'>Reconfirmar Presença</a></td>";
-                            }
-                        echo "</tr>";
-                    }
-                }
-                ?> 
+                    ?> 
+                </tbody>
             </table>
         <?php
         }

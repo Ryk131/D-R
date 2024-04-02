@@ -152,7 +152,7 @@ th {
 }
 
 
-#tbl_nomes > tr > td {
+#tbl_nomes > tbody > tr > td {
     border: 1px solid black;
     background-color: var(--cor1);
     color: white;
