@@ -23,8 +23,12 @@ require_once '../classes/repositorioConvidado.php';
     if($numeroLinhas == 1 && ($nome_convidado == "RYKELMY" || $nome_convidado == "DANIELLY")){
         header('Location: lista_convidados.php');
     } else if($numeroLinhas > 1) {
+        if(isset($_SESSION['mostrar_convidado'])) {
+            unset($_SESSION['mostrar_convidado']);
+        }
         $_SESSION['nome_convidado'] = $nome_convidado;
-        header('Location: selec_convidado.php');
+        $_SESSION['selec_convidado'] = true;
+        header('Location: pesquisa_convidado.php');
     } else if($numeroLinhas == 1) {
         $convidado = $repositorio->MostraConvidado($nome_convidado);
         foreach ($convidado as $key) {

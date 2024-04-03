@@ -16,6 +16,7 @@
 <body>
     <table>
         <?php
+            echo "<table>";
             $nomes = $repositorio->MostraConvidado($_SESSION['nome_convidado']);
             foreach ($nomes as $key) {
                 $nome = $key['nome_convidado'];
@@ -23,6 +24,7 @@
                 echo "<a href='selecionar.php?nome=$nome'>Selecionar</a>";
                 echo "<br>";
             }
+            echo "</table>";
         ?>
     </table>
 </body>

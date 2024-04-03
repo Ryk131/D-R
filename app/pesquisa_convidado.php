@@ -82,13 +82,13 @@ if(isset($_SESSION['nome_convidado'])) {
                                 echo "<td>".$key['nome_convidado']."</td>";
                                 if($key['confirm'] == NULL){
                                     echo "<td>Não Confirmado</td>";
-                                    echo "<td class='botao_conf'><a href='formulario_confirm.php?nome=$nome'>Confirmar Presença</a></td>";
+                                    echo "<td class='botao_conf'><a href='confirmar.php?nome=$nome'>Confirmar Presença</a></td>";
                                 } else if($key['confirm'] == 1) {
                                     echo "<td>Confirmado</td>";
-                                    echo "<td class='botao_conf'><a href='formulario_desconfirm.php'>Desconfirmar Presença</a></td>";
+                                    echo "<td class='botao_conf'><a href='desconfirmar.php?nome=$nome'>Desconfirmar Presença</a></td>";
                                 } else {
                                     echo "<td>Desconfirmado</td>";
-                                    echo "<td class='botao_conf'><a href='formulario_confirm.php'>Reconfirmar Presença</a></td>";
+                                    echo "<td class='botao_conf'><a href='confirmar.php?nome=$nome'>Reconfirmar Presença</a></td>";
                                 }
                             echo "</tr>";
                         }
@@ -97,6 +97,16 @@ if(isset($_SESSION['nome_convidado'])) {
                 </tbody>
             </table>
         <?php
+        } else if(isset($_SESSION['selec_convidado'])) {
+            echo "<table id='tbl_selec'>";
+            $nomes = $repositorio->MostraConvidado($_SESSION['nome_convidado']);
+            foreach ($nomes as $key) {
+                $nome = $key['nome_convidado'];
+                echo "<tr>".$key['nome_convidado']."</tr>";
+                echo "<a href='selecionar.php?nome=$nome'>Selecionar</a>";
+                echo "<br>";
+            }
+            echo "</table>";
         }
         ?> 
         <img id="img01" src="../imagens/img02.jpeg" alt="">

@@ -9,12 +9,10 @@ interface IRepositorioConvidados {
     public function ListarConvidados();   
     public function MostraConvidado($nome_convidado); 
     public function DeletarConvidado($nome_convidado); 
-    public function ConfirmarPresenca($doc_convidado,$confirm,$nome);
-    public function VerificarDoc($doc_convidado,$nome_convidado);
-    public function DesconfirmarPresenca($confirm,$nome_convidado,$doc_convidado);
-    public function ReconfirmarPresenca($confirm,$nome_convidado,$doc_convidado);
+    public function ConfirmarPresenca($confirm,$nome);
+    public function DesconfirmarPresenca($confirm,$nome_convidado);
+    public function ReconfirmarPresenca($confirm,$nome_convidado);
     public function PuxarNomes($nome); 
-    public function IsolarConvidado($nome_convidado,$fam_conv);
     public function VerifNumConv($fam_conv);
     public function GuardarMensagem($nome_convidado,$msg_convidado);
 }
@@ -67,28 +65,21 @@ class RepositorioConvidadosMySQL implements IRepositorioConvidados
         $this->conexao->executarQuery($sql);
     }
 
-    public function ConfirmarPresenca($doc_convidado,$confirm,$nome)
+    public function ConfirmarPresenca($confirm,$nome)
     {
-        $sql = "UPDATE tbl_convidados SET confirm = '$confirm', doc_convidado = '$doc_convidado' WHERE nome_convidado = '$nome'";
+        $sql = "UPDATE tbl_convidados SET confirm = '$confirm' WHERE nome_convidado = '$nome'";
         $this->conexao->executarQuery($sql);
     }
 
-    public function VerificarDoc($doc_convidado,$nome_convidado)
+    public function DesconfirmarPresenca($confirm,$nome_convidado)
     {
-        $sql = "SELECT * FROM tbl_convidados WHERE nome_convidado = '$nome_convidado' AND doc_convidado = '$doc_convidado'";
-        $linha = $this->conexao->obtemNumeroLinhas($sql);
-        return $linha;
-    }
-
-    public function DesconfirmarPresenca($confirm,$nome_convidado,$doc_convidado)
-    {
-        $sql = "UPDATE tbl_convidados SET confirm = '$confirm' WHERE doc_convidado = '$doc_convidado' AND nome_convidado = '$nome_convidado'";
+        $sql = "UPDATE tbl_convidados SET confirm = '$confirm' WHERE nome_convidado = '$nome_convidado'";
         $this->conexao->executarQuery($sql);
     }
 
-    public function ReconfirmarPresenca($confirm,$nome_convidado,$doc_convidado)
+    public function ReconfirmarPresenca($confirm,$nome_convidado)
     {
-        $sql = "UPDATE tbl_convidados SET confirm = '$confirm' WHERE doc_convidado = '$doc_convidado' AND nome_convidado = '$nome_convidado'";
+        $sql = "UPDATE tbl_convidados SET confirm = '$confirm' WHERE nome_convidado = '$nome_convidado'";
         $this->conexao->executarQuery($sql);
     }
 
@@ -97,12 +88,6 @@ class RepositorioConvidadosMySQL implements IRepositorioConvidados
         $sql = "SELECT * FROM tbl_convidados WHERE fam_conv = '$nome'";
         $listagem = $this->conexao->executarQuery($sql);
         return $listagem;
-    }
-
-    public function IsolarConvidado($nome_convidado,$fam_conv)
-    {
-        $sql = "UPDATE tbl_convidados SET fam_conv = '$fam_conv' WHERE nome_convidado = '$nome_convidado'";
-        $this->conexao->executarQuery($sql);
     }
 
     public function VerifNumConv($fam_conv)
