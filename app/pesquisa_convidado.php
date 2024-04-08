@@ -33,9 +33,9 @@ if(isset($_SESSION['nome_convidado'])) {
         <h1>Danielly & Rykelmy</h1>
         <nav>
             <a href="../index.php">Início</a>
-            <a href="#">Local e Hora</a>
+            <a href="../index.php?#local">Local e Hora</a>
             <a href="pesquisa_convidado.php">Confirmar Presença</a>
-            <a href="#" id="bl_msg">Mensagem para os noivos</a>
+            <a href="../index.php?#msg" id="bl_msg">Mensagem para os noivos</a>
         </nav>
     </header>
     <main>
