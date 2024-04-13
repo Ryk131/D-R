@@ -18,7 +18,7 @@
     <header>
         <h1>Danielly & Rykelmy</h1>
         <nav>
-            <a href="index.html">Início</a>
+            <a href="index.php">Início</a>
             <a href="#local">Local e Hora</a>
             <a href="app/pesquisa_convidado.php">Confirmar Presença</a>
             <a href="#msg" id="bl_msg">Mensagem para os noivos</a>

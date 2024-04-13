@@ -98,15 +98,22 @@ if(isset($_SESSION['nome_convidado'])) {
             </table>
         <?php
         } else if(isset($_SESSION['selec_convidado'])) {
-            echo "<table id='tbl_selec'>";
-            $nomes = $repositorio->MostraConvidado($_SESSION['nome_convidado']);
-            foreach ($nomes as $key) {
-                $nome = $key['nome_convidado'];
-                echo "<tr>".$key['nome_convidado']."</tr>";
-                echo "<a href='selecionar.php?nome=$nome'>Selecionar</a>";
-                echo "<br>";
-            }
-            echo "</table>";
+            ?>
+            <table id='tbl_select'>
+                <tbody>
+                    <?php
+                    $nomes = $repositorio->MostraConvidado($_SESSION['nome_convidado']);
+                    foreach ($nomes as $key) {
+                        $nome = $key['nome_convidado'];
+                        echo "<tr>";
+                            echo "<td>".$key['nome_convidado']."</td>";
+                            echo "<td><a href='selecionar.php?nome=$nome'>Selecionar</a></td>";
+                        echo "<tr>";
+                    }
+                    ?>
+                </tbody>
+            </table>
+            <?php
         }
         ?> 
         <img id="img01" src="../imagens/img02.jpeg" alt="">
