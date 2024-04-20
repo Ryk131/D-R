@@ -23,6 +23,7 @@ class RepositorioConvidadosMySQL implements IRepositorioConvidados
     public function __construct()
     {
         $this->conexao = new Conexao("localhost","id22023606_rykelmy","Rykdany.2205","id22023606_dr");
+
        
         if($this->conexao->conectar()==false){ 
             echo "Erro de conexao ".mysqli_connect_error(); 
