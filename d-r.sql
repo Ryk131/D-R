@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 01-Abr-2024 às 02:16
--- Versão do servidor: 10.4.21-MariaDB
--- versão do PHP: 8.0.11
+-- Tempo de geração: 30-Abr-2024 às 02:35
+-- Versão do servidor: 10.4.28-MariaDB
+-- versão do PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,7 +30,7 @@ SET time_zone = "+00:00";
 CREATE TABLE `mensagens_convidados` (
   `nome_convidado` varchar(200) NOT NULL,
   `msg_convidado` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `mensagens_convidados`
@@ -54,7 +54,7 @@ CREATE TABLE `tbl_convidados` (
   `doc_convidado` bigint(11) DEFAULT NULL,
   `fam_conv` varchar(100) NOT NULL,
   `confirm` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Extraindo dados da tabela `tbl_convidados`
@@ -113,8 +113,27 @@ INSERT INTO `tbl_convidados` (`id_convidado`, `nome_convidado`, `doc_convidado`,
 (74, 'Pedro Henrique Ferreira Leite ', NULL, 'RENATO', NULL),
 (75, 'Davi Lucca Ferreira Leite ', NULL, 'RENATO', NULL),
 (76, 'Daiane Ferreira ', NULL, 'DAIANE ', NULL),
-(77, 'Felipe Ferreira Machado ', NULL, 'DAIANE ', NULL),
-(78, 'Bianca Ferreira Machado ', NULL, 'DAIANE', NULL);
+(77, 'Felipe Ferreira', NULL, 'DAIANE ', NULL),
+(78, 'Bianca Ferreira', NULL, 'DAIANE', NULL),
+(79, 'Edivan Ferreira', NULL, 'EDIVAN', NULL),
+(80, 'Fernanda Ferreira', NULL, 'EDIVAN', NULL),
+(81, 'Nicoly Ferreira', NULL, 'EDIVAN', NULL),
+(82, 'Valdir Ferreira', NULL, 'VALDIR', NULL),
+(83, 'Keyla Ferreira', NULL, 'VALDIR', NULL),
+(84, 'Mikelly Luisa Ferreira', NULL, 'VALDIR', NULL),
+(85, 'Anthony Miguel Ferreira', NULL, 'VALDIR', NULL),
+(86, 'Alef Lopes ', NULL, 'ALEF', NULL),
+(87, 'Leticia Fernanda Lopes', NULL, 'ALEF', NULL),
+(88, 'Wesley Henrique ', NULL, 'WESLEY', NULL),
+(89, 'Isabella Stefani ', NULL, 'WESLEY', NULL),
+(90, 'Jhonny Ferreira ', NULL, 'WESLEY', NULL),
+(91, 'Bruno Carvalho', NULL, 'BRUNO', NULL),
+(92, 'Joyce Karen Carvalho', NULL, 'BRUNO', NULL),
+(93, 'Emily Carvalho', NULL, 'BRUNO', NULL),
+(94, 'Rafael Carvalho', NULL, 'BRUNO', NULL),
+(95, 'Carlos Miguel Ferreira ', NULL, 'CARLOS MIGUEL FERREIRA ', NULL),
+(96, 'Bianca Azevedo Ferreira ', NULL, 'CARLOS MIGUEL FERREIRA ', NULL),
+(97, 'Davi Miguel Ferreira ', NULL, 'CARLOS MIGUEL FERREIRA ', NULL);
 
 --
 -- Índices para tabelas despejadas
@@ -134,7 +153,7 @@ ALTER TABLE `tbl_convidados`
 -- AUTO_INCREMENT de tabela `tbl_convidados`
 --
 ALTER TABLE `tbl_convidados`
-  MODIFY `id_convidado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+  MODIFY `id_convidado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
