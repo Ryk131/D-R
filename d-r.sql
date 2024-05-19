@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 09-Maio-2024 às 03:42
+-- Tempo de geração: 19-Maio-2024 às 04:44
 -- Versão do servidor: 10.4.28-MariaDB
 -- versão do PHP: 8.2.4
 
@@ -61,7 +61,7 @@ CREATE TABLE `tbl_convidados` (
 --
 
 INSERT INTO `tbl_convidados` (`id_convidado`, `nome_convidado`, `doc_convidado`, `fam_conv`, `confirm`) VALUES
-(2, 'Rykelmy Barbosa Lima Ferreira', NULL, '', NULL),
+(2, 'Rykelmy Barbosa Lima Ferreira', NULL, '', 1),
 (20, 'Edinaldo Sergio Ferreira', NULL, 'EDINALDO', NULL),
 (21, 'Carla Barbosa Lima Ferreira', NULL, 'EDINALDO', NULL),
 (22, 'Ryciery Barbosa Lima Ferreira', NULL, 'EDINALDO', NULL),
@@ -187,7 +187,7 @@ INSERT INTO `tbl_convidados` (`id_convidado`, `nome_convidado`, `doc_convidado`,
 (148, 'Damaris Ribeiro ', NULL, 'DAMARIS RIBEIRO', NULL),
 (149, 'Suelen ', NULL, 'EVERALDO ', NULL),
 (150, 'Everaldo ', NULL, 'EVERALDO', NULL),
-(151, 'Rebeca Brito ', NULL, 'REBECA BRITO', 1),
+(151, 'Rebeca Brito ', NULL, 'REBECA BRITO', NULL),
 (152, 'Rubens Cesar Vidal ', NULL, 'RUBENS CESAR', NULL),
 (153, 'Amanda Vidal ', NULL, 'RUBENS CESAR', NULL),
 (154, 'Ananda Ketilyn Vidal ', NULL, 'RUBENS CESAR ', NULL),
@@ -203,11 +203,11 @@ INSERT INTO `tbl_convidados` (`id_convidado`, `nome_convidado`, `doc_convidado`,
 (164, 'Isaac Romão ', NULL, 'JUNIOR ', NULL),
 (165, 'Pedro Romão ', NULL, 'JUNIOR ', NULL),
 (166, 'Jessica Bueno ', NULL, 'JUNIOR ', NULL),
-(167, 'Jorge Bezerra ', NULL, 'JORGE BEZERRA ', NULL),
-(168, 'Ruth Bezerra ', NULL, 'JORGE BEZERRA', NULL),
-(169, 'Samuel Bezerra', NULL, 'JORGE BEZERRA', NULL),
-(170, 'Sauana Bezerra ', NULL, 'JORGE BEZERRA ', NULL),
-(171, 'Mayksuel', NULL, 'JORGE BEZERRA', NULL),
+(167, 'Jorge Jesus', NULL, 'JORGE JESUS', NULL),
+(168, 'Ruth Bezerra ', NULL, 'JORGE JESUS', NULL),
+(169, 'Samuel Bezerra', NULL, 'JORGE JESUS', NULL),
+(170, 'Sauana Bezerra ', NULL, 'JORGE JESUS', NULL),
+(171, 'Mayksuel Jesus', NULL, 'JORGE JESUS', NULL),
 (172, 'Francisval Bezerra', NULL, 'VAL ', NULL),
 (173, 'Sirlene Bezerra', NULL, 'VAL ', NULL),
 (174, 'Beatriz Bezerra ', NULL, 'GABRIEL BEZERRA', NULL),
@@ -225,7 +225,13 @@ INSERT INTO `tbl_convidados` (`id_convidado`, `nome_convidado`, `doc_convidado`,
 (186, 'Eduarda Lovato ', NULL, 'ROMILDO LOVATO', NULL),
 (187, 'Samuel Lovato ', NULL, 'ROMILDO LOVATO ', NULL),
 (188, 'Arthur Lovato ', NULL, 'ROMILDO LOVATO ', NULL),
-(189, 'Bianca Lovato ', NULL, 'ROMILDO LOVATO ', NULL);
+(189, 'Bianca Lovato ', NULL, 'ROMILDO LOVATO ', NULL),
+(190, 'Adriano Alves da Silva', NULL, 'ADRIANO ALVES', NULL),
+(191, 'Luciana Lima Pinheiro', NULL, 'ADRIANO ALVES', NULL),
+(192, 'André Machado Cabral', NULL, 'ANDRE MACHADO', NULL),
+(193, 'Amanda Caroline Pinheiro Espadas Cabral', NULL, 'ANDRE MACHADO', NULL),
+(194, 'Pablo Espadas Cabral', NULL, 'ANDRE MACHADO', NULL),
+(195, 'Davi Espadas Cabral', NULL, 'ANDRE MACHADO', NULL);
 
 --
 -- Índices para tabelas despejadas
@@ -245,7 +251,7 @@ ALTER TABLE `tbl_convidados`
 -- AUTO_INCREMENT de tabela `tbl_convidados`
 --
 ALTER TABLE `tbl_convidados`
-  MODIFY `id_convidado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=190;
+  MODIFY `id_convidado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=196;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
