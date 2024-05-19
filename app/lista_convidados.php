@@ -5,6 +5,8 @@ session_start();
 require_once '../classes/repositorioConvidado.php';
 $repositorio = new RepositorioConvidadosMySQL();
 $lista_convidados = $repositorio->ListarConvidados(); 
+$convidados_confirmados = $repositorio->NumConv(1);
+$convidados_nconfirmados = $repositorio->NumConv(11);
 
 $_SESSION['admin'] = TRUE;
 
@@ -32,6 +34,8 @@ unset($_SESSION['nome_convidado']);
     </header>
     <main>
         <?php
+            echo "<h2>Convidados Confirmados: ".$convidados_confirmados." <a href='alt_tbl.php'>Detalhes</a></h2>";
+            echo "<h2>Convidados Não Confirmados: ".$convidados_nconfirmados." <a href='alt_tbl.php'>Detalhes</a></h2>";
             echo "<table id='lista_convidados'>";
                 echo "<thead>";
                     echo "<tr>";

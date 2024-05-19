@@ -15,6 +15,7 @@ interface IRepositorioConvidados {
     public function PuxarNomes($nome); 
     public function VerifNumConv($fam_conv);
     public function GuardarMensagem($nome_convidado,$msg_convidado);
+    public function NumConv($conf);
 }
  
 class RepositorioConvidadosMySQL implements IRepositorioConvidados
@@ -22,7 +23,9 @@ class RepositorioConvidadosMySQL implements IRepositorioConvidados
     private $conexao; 
     public function __construct()
     {
-        $this->conexao = new Conexao("localhost","id22023606_rykelmy","Rykdany.2205","id22023606_dr");
+        // site -> "localhost","id22023606_rykelmy","Rykdany.2205","id22023606_dr"
+        // teste -> "localhost","root","","d-r"
+        $this->conexao = new Conexao("localhost","root","","d-r");
 
        
         if($this->conexao->conectar()==false){ 
@@ -102,6 +105,16 @@ class RepositorioConvidadosMySQL implements IRepositorioConvidados
     {
         $sql = "INSERT INTO mensagens_convidados (nome_convidado,msg_convidado) VALUES ('$nome_convidado','$msg_convidado')";
         $this->conexao->executarQuery($sql);
+    }
+
+    public function NumConv($conf)
+    {
+        if($conf == 11){
+            $conf = NULL;
+        }
+        $sql = "SELECT * FROM tbl_convidados WHERE confirm = '$conf'";
+        $linha = $this->conexao->obtemNumeroLinhas($sql);
+        return $linha;
     }
 
 }
