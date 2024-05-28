@@ -7,7 +7,7 @@ $repositorio = new RepositorioConvidadosMySQL();
 
 $nome_convidado = $_GET['nome'];
 
-    $confirm = 0;
+    $confirm = 2;
     $desconfirmar = $repositorio->DesconfirmarPresenca($confirm,$nome_convidado);
     if(isset($_SESSION['admin'])){
         header('Location: lista_convidados.php');

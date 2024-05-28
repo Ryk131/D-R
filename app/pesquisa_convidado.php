@@ -80,7 +80,7 @@ if(isset($_SESSION['nome_convidado'])) {
                             $nome = $key['nome_convidado'];
                             echo "<tr>";
                                 echo "<td>".$key['nome_convidado']."</td>";
-                                if($key['confirm'] == NULL){
+                                if($key['confirm'] == 0){
                                     echo "<td>Não Confirmado</td>";
                                     echo "<td class='botao_conf'><a href='confirmar.php?nome=$nome'>Confirmar Presença</a></td>";
                                 } else if($key['confirm'] == 1) {

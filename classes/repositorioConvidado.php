@@ -16,6 +16,7 @@ interface IRepositorioConvidados {
     public function VerifNumConv($fam_conv);
     public function GuardarMensagem($nome_convidado,$msg_convidado);
     public function NumConv($conf);
+    public function NumTot();
 }
  
 class RepositorioConvidadosMySQL implements IRepositorioConvidados
@@ -109,13 +110,16 @@ class RepositorioConvidadosMySQL implements IRepositorioConvidados
 
     public function NumConv($conf)
     {
-        if($conf == 11){
-            $conf = NULL;
-        }
         $sql = "SELECT * FROM tbl_convidados WHERE confirm = '$conf'";
         $linha = $this->conexao->obtemNumeroLinhas($sql);
         return $linha;
     }
 
+    public function NumTot() 
+    {
+        $sql = "SELECT * FROM tbl_convidados";
+        $linha = $this->conexao->obtemNumeroLinhas($sql);
+        return $linha;
+    }
 }
    

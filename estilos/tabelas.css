@@ -82,113 +82,61 @@ nav > a:hover {
     background-color: var(--cor4);
 }
 
-#form-pesq {
-    font-family: var(--fonte4);
-    margin: 10px;
-    color: white;
-    background-color: var(--cor2);
-    padding: 10px;
-    border-radius: 5px;
-}
 
-#form-nome > input {
-    height: 25px;
-    width: 55vw;
-    font-family: var(--fonte4);
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
-}
-
-#form-nome, #form-env {
-    display: inline-block;
-}
-
-#bt-pesq {
-    background-image: url('../imagens/pesq-icon.png');
-    background-repeat: no-repeat;
-    background-position: center center;
-    width: 34px;
-    height: 35px;
-    border: none;
-    border-radius: 5px;
-}
-
-#bt-pesq:hover {
-    background-color: var(--cor1);
-    cursor:pointer;
-}
-
-#img01 {
-    width: 480px;
-    height: 530px;
-    margin: 10px;
-}
-
-#img02 {
-    width: 220px;
-    display: block;
-    height: 240px;
-    float: left;
-    margin: 10px;
-}
-
-#img03 {
-    width: 220px;
-    display: block;
-    height: 240px;
-    float: right;
-    margin: 10px;
-}
-
-#tbl_nomes {
+#lista_convidados {
     margin:auto;
     border-collapse: collapse;
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#lista_convidados > thead > tr > th {
+    color: white;
+    background-color: var(--cor2);
+    font-weight: normal;
+    font-family: var(--fonte4);
+    border: 1px solid black;
 }
 
-th {
-    background-color: var(--cor);
-}
-
-#tbl_nomes > tbody > tr > td {
+#lista_convidados > tbody > tr > td {
     border: 1px solid black;
     background-color: var(--cor1);
     color: white;
     font-family: var(--fonte4);
-    padding: 3px;
-    width: 150px;
+    font-size: 0.9em;
+    padding: 2px;
+    width: 20vw;
 }
 
-#tbl_nomes > tbody > tr > .botao_conf:hover {
-    background-color: var(--cor2);
-}
-
-#tbl_nomes > tbody > tr > td > a {
-    text-decoration: none;
-    color:white;
-}
-
-#tbl_select {
-    margin:auto;
-    border-collapse: collapse;
-    text-align: center;
-}
-
-#tbl_select > tbody > tr > td {
-    border: 1px solid black;
-    background-color: var(--cor1);
-    color: white;
-    font-family: var(--fonte4);
-    padding: 5px;
-    width: 150px;
-}
-
-#tbl_select > tbody > tr > td > a {
+#lista_convidados > tbody > tr > td > a {
     text-decoration: none;
     color: white
 }
 
-#tbl_select > tbody > tr > td > a:hover {
+#lista_convidados > tbody > tr > td > a:hover {
     color: var(--cor2);
+}
+
+#tbls {
+    background-color: var(--cor1);
+    padding: 5px;
+    border: solid 1px black;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+    font-size: 1.1em;
+    font-family: var(--fonte4);
+    color: white;
+    width: 80vw;
+}
+
+div > p > a {
+    text-decoration: none;
+    color: purple;
+    transition: 0.5;
+}
+
+div > p > a:hover {
+    color: var(--cor2)
 }

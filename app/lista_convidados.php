@@ -2,11 +2,21 @@
  
 session_start();
 
+if(isset($_SESSION['tbtp'])){
+
+} else {
+    $_SESSION['tbtp'] = 3;
+}
+
 require_once '../classes/repositorioConvidado.php';
 $repositorio = new RepositorioConvidadosMySQL();
 $lista_convidados = $repositorio->ListarConvidados(); 
 $convidados_confirmados = $repositorio->NumConv(1);
-$convidados_nconfirmados = $repositorio->NumConv(11);
+$convidados_nconfirmados = $repositorio->NumConv(0);
+$convidados_nconfirmados = $convidados_nconfirmados - 2;
+$convidados_dconfirmados = $repositorio->NumConv(2);
+$convidados = $repositorio->NumTot();
+$convidados = $convidados - 2;
 
 $_SESSION['admin'] = TRUE;
 
@@ -20,7 +30,7 @@ unset($_SESSION['nome_convidado']);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Convidados</title>
-    <link rel="stylesheet" href="../estilos/confirm-presenc.css">
+    <link rel="stylesheet" href="../estilos/tabelas.css">
 </head>
 <body>
     <header>
@@ -34,8 +44,21 @@ unset($_SESSION['nome_convidado']);
     </header>
     <main>
         <?php
-            echo "<h2>Convidados Confirmados: ".$convidados_confirmados." <a href='alt_tbl.php'>Detalhes</a></h2>";
-            echo "<h2>Convidados Não Confirmados: ".$convidados_nconfirmados." <a href='alt_tbl.php'>Detalhes</a></h2>";
+            echo "<div id='tbls'>";
+                if($_SESSION['tbtp'] != 1) {
+                    echo "<p>Convidados Confirmados: ".$convidados_confirmados." <a href='alt_tbl.php?tb=1'>( Detalhes )</a></p>";
+                }
+                if($_SESSION['tbtp'] != 0) {
+                    echo "<p>Convidados Não Confirmados: ".$convidados_nconfirmados." <a href='alt_tbl.php?tb=0'>( Detalhes )</a></p>";
+                }
+                if($_SESSION['tbtp'] != 2) {
+                    echo "<p>Convidados Desconfirmados: ".$convidados_dconfirmados." <a href='alt_tbl.php?tb=2'>( Detalhes )</a></p>";
+                }
+                echo "<p>Total de Convidados: ".$convidados;
+                if($_SESSION['tbtp'] != 3) {
+                    echo "<a href='alt_tbl.php?tb=3'>( Detalhes )</a></p>";
+                }   
+            echo "</div>";
             echo "<table id='lista_convidados'>";
                 echo "<thead>";
                     echo "<tr>";
@@ -48,7 +71,7 @@ unset($_SESSION['nome_convidado']);
                         $nome = $key['nome_convidado'];
                         echo "<tr>";
                             echo "<td>".$key['nome_convidado']."</td>";
-                            if($key['confirm'] == NULL){
+                            if($key['confirm'] == 0){
                                 echo "<td>NÃO CONFIRMADO</td>";
                                 echo "<td><a href='confirmar.php?nome=$nome'>Confirmar Presença</a></td>";
                             } else if($key['confirm'] == 1) {
