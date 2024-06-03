@@ -6,7 +6,7 @@ require_once 'conexao.php';
 interface IRepositorioConvidados {
     public function PesquisaConvidado($nome_convidado);
     public function CadastraConvidado($Convidado);
-    public function ListarConvidados();   
+    public function ListarConvidados($tbtp);   
     public function MostraConvidado($nome_convidado); 
     public function DeletarConvidado($nome_convidado); 
     public function ConfirmarPresenca($confirm,$nome);
@@ -50,9 +50,12 @@ class RepositorioConvidadosMySQL implements IRepositorioConvidados
     }
 
     
-    public function ListarConvidados()
+    public function ListarConvidados($tbtp)
     {
-        $sql = "SELECT * FROM tbl_convidados ORDER BY nome_convidado ASC";
+        if($tbtp == 3) {
+            $tbtp = NULL;
+        }
+        $sql = "SELECT * FROM tbl_convidados WHERE confirm = '$tbtp' ORDER BY nome_convidado ASC";
         $listagem = $this->conexao->executarQuery($sql);
         return $listagem;
     }

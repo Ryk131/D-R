@@ -10,7 +10,7 @@ if(isset($_SESSION['tbtp'])){
 
 require_once '../classes/repositorioConvidado.php';
 $repositorio = new RepositorioConvidadosMySQL();
-$lista_convidados = $repositorio->ListarConvidados(); 
+$lista_convidados = $repositorio->ListarConvidados($_SESSION['tbtp']); 
 $convidados_confirmados = $repositorio->NumConv(1);
 $convidados_nconfirmados = $repositorio->NumConv(0);
 $convidados_nconfirmados = $convidados_nconfirmados - 2;

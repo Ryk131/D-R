@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 29-Maio-2024 às 23:28
+-- Tempo de geração: 04-Jun-2024 às 00:44
 -- Versão do servidor: 10.4.21-MariaDB
 -- versão do PHP: 8.0.11
 
@@ -231,7 +231,31 @@ INSERT INTO `tbl_convidados` (`id_convidado`, `nome_convidado`, `doc_convidado`,
 (192, 'André Machado Cabral', NULL, 'ANDRE MACHADO', 0),
 (193, 'Amanda Caroline Pinheiro Espadas Cabral', NULL, 'ANDRE MACHADO', 0),
 (194, 'Pablo Espadas Cabral', NULL, 'ANDRE MACHADO', 0),
-(195, 'Davi Espadas Cabral', NULL, 'ANDRE MACHADO', 0);
+(195, 'Davi Espadas Cabral', NULL, 'ANDRE MACHADO', 0),
+(196, 'Maria Cecília Pereira', NULL, 'TATA', 0),
+(197, 'Caroline Pereira', NULL, 'TATA', 0),
+(198, 'Manueli Pereira', NULL, 'TATA', 0),
+(199, 'João', NULL, 'JOAO', 0),
+(200, 'Maria', NULL, 'JOAO', 0),
+(201, 'Micael Pereira', NULL, 'MICAEL PEREIRA', 0),
+(202, 'Nataly Pereira', NULL, 'MICAEL PEREIRA', 0),
+(203, 'Eduardo Marques', NULL, 'EDUARDO MARQUES', 0),
+(204, 'Marcia Marques', NULL, 'EDUARDO MARQUES', 0),
+(205, 'César Marques', NULL, 'EDUARDO MARQUES', 0),
+(206, 'Mario Pereira', NULL, 'MARIO PEREIRA', 0),
+(207, 'Marinês Pereira', NULL, 'MARIO PEREIRA', 0),
+(208, 'Magdiel Pereira', NULL, 'MARIO PEREIRA', 0),
+(209, 'Maxwell Pereira', NULL, 'MARIO PEREIRA', 0),
+(210, 'Matias Pereira', NULL, 'MATIAS PEREIRA', 0),
+(211, 'Valquiria Pereira', NULL, 'MATIAS PEREIRA', 0),
+(212, 'Ían Pereira', NULL, 'MATIAS PEREiRA', 0),
+(213, 'Tadeu Shazon', NULL, 'TADEU', 0),
+(214, 'Miriam Shazon', NULL, 'TADEU', 0),
+(215, 'Gilberto Ricco', NULL, 'GILBERTO RICCO', 0),
+(216, 'Regina Ricco', NULL, 'GILBERTO RICCO', 0),
+(217, 'André Ricco', NULL, 'ANDRE RICCO', 0),
+(218, 'Cassiana Ricco', NULL, 'ANDRE RICCO', 0),
+(219, 'Pedro Henrique Ricco', NULL, 'ANDRE RICCO', 0);
 
 --
 -- Índices para tabelas despejadas
@@ -251,7 +275,7 @@ ALTER TABLE `tbl_convidados`
 -- AUTO_INCREMENT de tabela `tbl_convidados`
 --
 ALTER TABLE `tbl_convidados`
-  MODIFY `id_convidado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=196;
+  MODIFY `id_convidado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=220;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
