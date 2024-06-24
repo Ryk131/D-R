@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 11-Jun-2024 às 02:59
+-- Tempo de geração: 25-Jun-2024 às 01:46
 -- Versão do servidor: 10.4.21-MariaDB
 -- versão do PHP: 8.0.11
 
@@ -138,8 +138,6 @@ INSERT INTO `tbl_convidados` (`id_convidado`, `nome_convidado`, `doc_convidado`,
 (99, 'Murilo Pereira ', NULL, 'MARIANA P', 0),
 (100, 'Milene Pereira ', NULL, 'MARIANA P', 0),
 (101, 'Marjorie Pereira ', NULL, 'MARIANA P', 0),
-(102, 'Micael Pereira ', NULL, 'MICAEL', 0),
-(103, 'Nataly Pereira', NULL, 'MICAEL', 0),
 (104, 'Daniel Jeronimo de Gouveia ', NULL, 'DANIEL JERONIMO', 0),
 (105, 'Tania Neris Moraes de Gouveia ', NULL, 'DANIEL JERONIMO', 0),
 (106, 'Giovana Neris Moraes de Gouveia ', NULL, 'DANIEL JERONIMO', 0),
@@ -212,13 +210,13 @@ INSERT INTO `tbl_convidados` (`id_convidado`, `nome_convidado`, `doc_convidado`,
 (173, 'Sirlene Bezerra', NULL, 'VAL ', 0),
 (174, 'Beatriz Bezerra ', NULL, 'GABRIEL BEZERRA', 0),
 (175, 'Gabriel Bezerra ', NULL, 'GABRIEL BEZERRA', 0),
-(176, 'Rafael Bezerra', NULL, 'RAFAEL BEZERRA ', 0),
-(177, 'Biana Ruiz ', NULL, 'RAFAEL BEZERRA ', 0),
-(178, 'Laura Ruiz ', NULL, 'RAFAEL BEZERRA \r\n', 0),
-(179, 'Daniel Ruiz ', NULL, 'RAFAEL BEZERRA ', 0),
-(180, 'Jéssica Bezerra ', NULL, 'FAGNER ', 0),
-(181, 'Fagner', NULL, 'FAGNER ', 0),
-(182, 'Davi ', NULL, 'FAGNER ', 0),
+(176, 'Rafael Bezerra', NULL, 'RAFAEL BEZERRA', 0),
+(177, 'Bianca Ruiz ', NULL, 'RAFAEL BEZERRA', 0),
+(178, 'Laura Ruiz ', NULL, 'RAFAEL BEZERRA', 0),
+(179, 'Daniel Ruiz ', NULL, 'RAFAEL BEZERRA', 0),
+(180, 'Jéssica Bezerra ', NULL, 'FAGNER', 0),
+(181, 'Fagner', NULL, 'FAGNER', 0),
+(182, 'Davi Bezerra', NULL, 'FAGNER', 0),
 (183, 'Romildo Lovato', NULL, 'ROMILDO LOVATO ', 0),
 (184, 'Vilma Lovato ', NULL, 'ROMILDO LOVATO ', 0),
 (185, 'Bruna Lovato ', NULL, 'ROMILDO LOVATO', 0),
@@ -235,8 +233,6 @@ INSERT INTO `tbl_convidados` (`id_convidado`, `nome_convidado`, `doc_convidado`,
 (196, 'Maria Cecília Pereira', NULL, 'TATA', 0),
 (197, 'Caroline Pereira', NULL, 'TATA', 0),
 (198, 'Manueli Pereira', NULL, 'TATA', 0),
-(199, 'João', NULL, 'JOAO', 0),
-(200, 'Maria', NULL, 'JOAO', 0),
 (201, 'Micael Pereira', NULL, 'MICAEL PEREIRA', 0),
 (202, 'Nataly Pereira', NULL, 'MICAEL PEREIRA', 0),
 (203, 'Eduardo Marques', NULL, 'EDUARDO MARQUES', 0),
@@ -275,7 +271,7 @@ INSERT INTO `tbl_convidados` (`id_convidado`, `nome_convidado`, `doc_convidado`,
 (236, 'João Gonçalves da Silva', NULL, 'JOAO GONÇALVES', 0),
 (237, 'Isabel Barbosa da Silva', NULL, 'JOAO GOLÇALVES', 0),
 (238, 'Daiane Barbosa', NULL, 'JOAO GONÇALVES', 0),
-(239, 'PADRASTO THAUANY', NULL, 'JOAO GONÇALVES', 0),
+(239, 'Alex', NULL, 'JOAO GONÇALVES', 0),
 (240, 'José Araujo', NULL, 'JOSE ARAUJO', 0),
 (241, 'Juliana Araujo', NULL, 'JOSE ARAUJO', 0),
 (242, 'Isaque Araujo', NULL, 'JOSE ARAUJO', 0),
@@ -283,7 +279,50 @@ INSERT INTO `tbl_convidados` (`id_convidado`, `nome_convidado`, `doc_convidado`,
 (244, 'Henri Araujo', NULL, 'JOSE ARAUJO', 0),
 (245, 'Marcos Pereira', NULL, 'MARCOS PEREIRA', 0),
 (246, 'Neuza Pereira', NULL, 'MARCOS PEREIRA', 0),
-(247, 'Natália Pereira', NULL, 'MARCOS PEREIRA', 0);
+(247, 'Natália Pereira', NULL, 'MARCOS PEREIRA', 0),
+(248, 'Samuel Murashita', NULL, 'SAMUEL MURASHITA', 0),
+(249, 'Grazielly Murashita', NULL, 'SAMUEL MURASHITA', 0),
+(250, 'Marcelo Vilas Boas', NULL, 'MARCELO VILAS BOAS', 0),
+(251, 'Francine Vilas Boas', NULL, 'MARCELO VILAS BOAS', 0),
+(252, 'Antonela Vilas Boas', NULL, 'MARCELO VILAS BOAS', 0),
+(253, 'Isaac Santos', NULL, 'ISAAC SANTOS', 0),
+(254, 'Cecília Santos', NULL, 'ISAAC SANTOS', 0),
+(255, 'Bentinho Neres', NULL, 'BENTINHO', 0),
+(256, 'Anaura Neres', NULL, 'BENTINHO', 0),
+(257, 'Wellington Mazei', NULL, 'WELLINGTON MAZEI', 0),
+(258, 'Juliana Mazei', NULL, 'WELLINGTON MAZEI', 0),
+(259, 'Allan Lins', NULL, 'ALLAN LINS', 0),
+(260, 'Adriana Lins', NULL, 'ALLAN LINS', 0),
+(261, 'Ana Laura Lins', NULL, 'ALLAN LINS', 0),
+(262, 'Pedro Vidal Rocha', NULL, 'PEDRO VIDAL ROCHA', 0),
+(263, 'Helenice Vidal Rocha', NULL, 'PEDRO VIDAL ROCHA', 0),
+(264, 'Ana Thaine Costa', NULL, 'THAINE', 0),
+(265, 'Christian Micael', NULL, 'THAINE', 0),
+(266, 'Zete', NULL, 'THAINE', 0),
+(267, 'Ana Thaina Costa', NULL, 'ANA THAINA', 0),
+(268, 'Isis Costa', NULL, 'ANA THAINA', 0),
+(269, 'Jhozi Monteiro', NULL, 'JHOZI MONTEIRO', 0),
+(270, 'Jaqueline Monteiro', NULL, 'JHOZI MONTEIRO', 0),
+(271, 'Judi Glécia Calvalcante', NULL, 'JUDI', 0),
+(272, 'Tabata Francine', NULL, 'TABATA FRANCINE', 0),
+(273, 'Isac Bochi', NULL, 'ISAC BOCHI', 0),
+(274, 'Marli Bochi', NULL, 'ISAC BOCHI', 0),
+(275, 'Giseli Bochi', NULL, 'ISAC BOCHI', 0),
+(276, 'Ricardo Cavalcante', NULL, 'RICARDO CAVALCANTE', 0),
+(277, 'Jaqueline Cavalcante', NULL, 'RICARDO CAVALCANTE', 0),
+(278, 'Isabela Cavalcante', NULL, 'RICARDO CAVALCANTE', 0),
+(279, 'Mateus Cavalcante', NULL, 'RICARDO CAVALCANTE', 0),
+(280, 'Arthur Cavalcante', NULL, 'RICARDO CAVALCANTE', 0),
+(281, 'Mari Nogueira', NULL, 'MARI NOGUEIRA', 0),
+(282, 'Marcio Muzeli', NULL, 'MARCIO MUZELI', 0),
+(283, 'Leiliane Muzeli', NULL, 'MARCIO MUZELI', 0),
+(284, 'Mayara Gomes', NULL, 'MAYARA GOMES', 0),
+(285, 'Jheniany Ribeiro', NULL, 'JHENIANY RIBEIRO', 0),
+(286, 'Lucas Leonardo', NULL, 'LUCAS LEONARDO', 0),
+(287, 'Kauany Oliveira', NULL, 'LUCAS LEONARDO', 0),
+(288, 'Moises Pereira', NULL, 'MOISES PEREIRA', 0),
+(289, 'Katia Pereira', NULL, 'MOISES PEREIRA', 0),
+(290, 'Guilherme Pereira', NULL, 'MOISES PEREIRA', 0);
 
 --
 -- Índices para tabelas despejadas
@@ -303,7 +342,7 @@ ALTER TABLE `tbl_convidados`
 -- AUTO_INCREMENT de tabela `tbl_convidados`
 --
 ALTER TABLE `tbl_convidados`
-  MODIFY `id_convidado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=248;
+  MODIFY `id_convidado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=291;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

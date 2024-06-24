@@ -5,9 +5,6 @@ session_start();
 require_once '../classes/repositorioConvidado.php';
 $repositorio = new RepositorioConvidadosMySQL();
 
-if(isset($_SESSION['retira'])){ 
-    unset($_SESSION['retira']);
-}
 
 if(isset($_SESSION['nome_convidado'])) {
     $nome_convidado = $_SESSION['nome_convidado'];
