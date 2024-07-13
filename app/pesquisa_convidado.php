@@ -40,7 +40,7 @@ if(isset($_SESSION['nome_convidado'])) {
             <p id="form-nome">
                 <label for="nome">Pesquisar Nome</label>
                 <input type="text" name="nome" id="nome" 
-                placeholder="Digite aqui Nome Completo do Convidado" required >
+                placeholder="Nome Completo do Convidado" required >
             </p>
             <p id="form-env">
                 <input id="bt-pesq" type="submit" value=" ">
@@ -115,7 +115,7 @@ if(isset($_SESSION['nome_convidado'])) {
         ?> 
         
         <img id="img01" src="../imagens/img02.jpeg" alt="">
-        
+
     </main>
     <?php
         if(isset($_SESSION['mensagem'])){
