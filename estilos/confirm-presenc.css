@@ -120,25 +120,10 @@ nav > a:hover {
 }
 
 #img01 {
-    width: 480px;
-    height: 530px;
-    margin: 10px;
-}
-
-#img02 {
-    width: 220px;
     display: block;
-    height: 240px;
-    float: left;
-    margin: 10px;
-}
-
-#img03 {
-    width: 220px;
-    display: block;
-    height: 240px;
-    float: right;
-    margin: 10px;
+    width: 430px;
+    height: 480px;
+    margin: auto;
 }
 
 #tbl_nomes {
