@@ -26,7 +26,7 @@ class RepositorioConvidadosMySQL implements IRepositorioConvidados
     {
         // site -> "localhost","id22023606_rykelmy","Rykdany.2205","id22023606_dr"
         // teste -> "localhost","root","","d-r"
-        $this->conexao = new Conexao("localhost","id22023606_rykelmy","Rykdany.2205","id22023606_dr");
+        $this->conexao = new Conexao("localhost","root","","d-r");
 
        
         if($this->conexao->conectar()==false){ 
