@@ -13,6 +13,16 @@ if(isset($_SESSION['nome_convidado'])) {
         $nome = $key['fam_conv'];
     }
     $nomes = $repositorio->PuxarNomes($nome);
+} else {
+    $nome_convidado = " ";
+    $nome = " ";
+    ?>
+    <style> 
+        #tbl_nomes {
+            display: none;
+        }
+    </style>
+    <?php
 }
 
 ?>
@@ -48,6 +58,10 @@ if(isset($_SESSION['nome_convidado'])) {
         </form>
 
         <?php
+        if(isset($_SESSION['mensagem'])){
+            echo "<p id='msg_cvne'> Convidado não encontrado! </p>";
+        }
+        
         if(isset($_SESSION['mostrar_convidado'])) {
             ?>
             <table id="tbl_nomes">
@@ -112,10 +126,5 @@ if(isset($_SESSION['nome_convidado'])) {
         <img id="img01" src="../imagens/img02.jpeg" alt="">
 
     </main>
-    <?php
-        if(isset($_SESSION['mensagem'])){
-            echo "<p style='color: red; margin: auto'> Convidado não encontrado! </p>";
-        }
-    ?>
 </body>
 </html>

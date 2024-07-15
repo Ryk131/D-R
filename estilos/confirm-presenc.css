@@ -183,3 +183,14 @@ th {
 #tbl_select > tbody > tr > td > a:hover {
     color: var(--cor2);
 }
+
+#msg_cvne {
+    display: block;
+    width: 50vw;
+    border-radius: 5px;
+    margin: auto;
+    background-color: rgba(255, 0, 0, 0.582);
+    text-align: center;
+    font-family: var(--fonte4);
+    margin-bottom: 20px;
+}

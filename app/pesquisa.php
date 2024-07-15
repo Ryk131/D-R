@@ -19,7 +19,6 @@ require_once '../classes/repositorioConvidado.php';
     $nome_convidado = strtr($nome_convidado,$caracteres_sem_acento);
     $numeroLinhas = $repositorio->PesquisaConvidado($nome_convidado);
 
-
     if($numeroLinhas == 1 && ($nome_convidado == "RYKELMY" || $nome_convidado == "DANIELLY")){
         header('Location: lista_convidados.php');
     } else if($numeroLinhas > 1) {
@@ -38,6 +37,7 @@ require_once '../classes/repositorioConvidado.php';
         $_SESSION['mostrar_convidado'] = true;
         header('Location: pesquisa_convidado.php');
     } else {
+        unset($_SESSION['nome_convidado']);
         $_SESSION['mensagem'] = "Convidado não encontrado";
         header('Location: pesquisa_convidado.php');
     }
