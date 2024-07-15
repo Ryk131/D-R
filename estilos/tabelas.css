@@ -20,11 +20,17 @@
     src: url('../fontes/Courgette-Regular.ttf') format(truetype);
 }
 
+@font-face {
+    font-family: 'roboto mono';
+    src: url('../fontes/RobotoMono-Bold.ttf') format(truetype);
+}
+
 :root {
     --fonte1: 'angelia beauty';
     --fonte2: 'normal';
     --fonte3: 'pacifico regular';
     --fonte4: 'courgete regular';
+    --fonte5: 'roboto mono';
     --cor1: #D789D9;
     --cor2: #A260BF;
     --cor3: #6C3873;
@@ -139,4 +145,8 @@ div > p > a {
 
 div > p > a:hover {
     color: var(--cor2)
+}
+
+#lista_convidados > tbody > tr > #inf01 {
+    font-family: var(--fonte5);
 }

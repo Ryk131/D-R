@@ -72,13 +72,13 @@ unset($_SESSION['nome_convidado']);
                         echo "<tr>";
                             echo "<td>".$key['nome_convidado']."</td>";
                             if($key['confirm'] == 0){
-                                echo "<td>NÃO CONFIRMADO</td>";
+                                echo "<td id='inf01'>NÃO CONFIRMADO</td>";
                                 echo "<td><a href='confirmar.php?nome=$nome'>Confirmar Presença</a></td>";
                             } else if($key['confirm'] == 1) {
-                                echo "<td>CONFIRMADO</td>";
+                                echo "<td id='inf01'>CONFIRMADO</td>";
                                 echo "<td><a href='desconfirmar.php?nome=$nome'>Desconfirmar Presença</a></td>";
                             } else {
-                                echo "<td>DESCONFIRMADO</td>";
+                                echo "<td id='inf01'>DESCONFIRMADO</td>";
                                 echo "<td><a href='confirmar.php?nome=$nome'>Reconfirmar Presença</a></td>";
                             }
                             echo "<td><a href='confirm_excl.php?nome=$nome'>Excluir Convidado</a></td>";
