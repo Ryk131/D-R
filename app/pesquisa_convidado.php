@@ -68,11 +68,6 @@ if(isset($_SESSION['nome_convidado'])) {
                         }
                         $tam_c = count($nomes_conf) - 1;
                         $tam_d = count($nomes_desc) - 1;
-                        if($nomes_conf != NULL){
-                            
-                        } else {
-                            
-                        }
                         foreach ($nomes as $key) {
                             $nome = $key['nome_convidado'];
                             echo "<tr>";
