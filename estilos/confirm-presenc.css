@@ -161,6 +161,9 @@ th {
     margin:auto;
     border-collapse: collapse;
     text-align: center;
+    width: 90vw;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
 
 #tbl_select > tbody > tr > td {
