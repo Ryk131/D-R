@@ -75,7 +75,7 @@ unset($_SESSION['nome_convidado']);
                                 echo "<td id='inf01'>NÃO CONFIRMADO</td>";
                                 echo "<td><a href='confirmar.php?nome=$nome'>Confirmar Presença</a></td>";
                             } else if($key['confirm'] == 1) {
-                                echo "<td id='inf01'>CONFIRMADO</td>";
+                                echo "<td id='inf01' style='color: rgb(20, 163, 20)'>CONFIRMADO</td>";
                                 echo "<td><a href='desconfirmar.php?nome=$nome'>Desconfirmar Presença</a></td>";
                             } else {
                                 echo "<td id='inf01'>DESCONFIRMADO</td>";

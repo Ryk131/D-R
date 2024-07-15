@@ -53,11 +53,14 @@ class RepositorioConvidadosMySQL implements IRepositorioConvidados
     public function ListarConvidados($tbtp)
     {
         if($tbtp == 3) {
-            $tbtp = NULL;
+            $sql = "SELECT * FROM tbl_convidados ORDER BY nome_convidado ASC";
+            $listagem = $this->conexao->executarQuery($sql);
+            return $listagem;
+        } else {
+            $sql = "SELECT * FROM tbl_convidados WHERE confirm = '$tbtp' ORDER BY nome_convidado ASC";
+            $listagem = $this->conexao->executarQuery($sql);
+            return $listagem;
         }
-        $sql = "SELECT * FROM tbl_convidados WHERE confirm = '$tbtp' ORDER BY nome_convidado ASC";
-        $listagem = $this->conexao->executarQuery($sql);
-        return $listagem;
     }
 
     public function MostraConvidado($nome_convidado)
