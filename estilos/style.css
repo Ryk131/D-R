@@ -133,7 +133,7 @@ nav > a:hover {
 .texto > article > div > p {
     font-family: var(--fonte4);
     font-size: 1em;
-    text-align: justify;
+    text-align: left;
 }
 
 #espaco {
@@ -213,7 +213,7 @@ nav > a:hover {
 #hora > p {
     font-size: 1em;
     text-align: center ;
-    font-family: var(--fonte3);
+    font-family: var(--fonte3);  
 }
 
 #logo-maps, #logo-waze {
