@@ -59,6 +59,9 @@ unset($_SESSION['nome_convidado']);
                     echo "<a href='alt_tbl.php?tb=3'>( Detalhes )</a></p>";
                 }   
             echo "</div>";
+            echo "<div id='tbl_msg'>";
+                echo "<a href='alt_tbl.php?tb=NULL'>Ver mensagens dos Convidados</a>";
+            echo "</div>";
             echo "<table id='lista_convidados'>";
                 echo "<thead>";
                     echo "<tr>";

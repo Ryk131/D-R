@@ -150,3 +150,27 @@ div > p > a:hover {
 #lista_convidados > tbody > tr > #inf01 {
     font-family: var(--fonte5);
 }
+
+#tbl_msg {
+    background-color: var(--cor1);
+    padding: 5px;
+    border: solid 1px black;
+    border-radius: 10px;
+    text-align: center;
+    margin: auto;
+    margin-top: 15px;
+    font-size: 0.9em;
+    font-family: var(--fonte4);
+    color: white;
+    width: 80vw;
+}
+
+#tbl_msg > a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+#tbl_msg > a:hover {
+    color:var(--cor2)
+}
