@@ -1,10 +1,4 @@
 <?php
-
-$a = NULL;
-
-if($a == NULL) {
-    echo "OIII";
-}
  
 session_start();
 
@@ -15,7 +9,6 @@ require_once '../classes/repositorioConvidado.php';
 $repositorio = new RepositorioConvidadosMySQL();
 
 $tb = $_GET['tb'];
-echo $_GET['tb'];
 
 if($tb == 0) {
     $_SESSION['tbtp'] = 0;
@@ -24,13 +17,10 @@ if($tb == 0) {
 } else if($tb == 2) {
     $_SESSION['tbtp'] = 2;
 } else if($tb == NULL) {
-    echo "AA";
+    $_SESSION['tbtp'] = 4;
 } else {
     $_SESSION['tbtp'] = 3;
 }
-
-echo $tb;
-exit;
 
 header('Location: lista_convidados.php');
 

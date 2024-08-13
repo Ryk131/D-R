@@ -45,13 +45,13 @@ unset($_SESSION['nome_convidado']);
     <main>
         <?php
             echo "<div id='tbls'>";
-                if($_SESSION['tbtp'] != 1) {
+                if($_SESSION['tbtp'] != 1 && $_SESSION['tbtp'] != 4) {
                     echo "<p>Convidados Confirmados: ".$convidados_confirmados." <a href='alt_tbl.php?tb=1'>( Detalhes )</a></p>";
                 }
-                if($_SESSION['tbtp'] != 0) {
+                if($_SESSION['tbtp'] != 0 && $_SESSION['tbtp'] != 4) {
                     echo "<p>Convidados Não Confirmados: ".$convidados_nconfirmados." <a href='alt_tbl.php?tb=0'>( Detalhes )</a></p>";
                 }
-                if($_SESSION['tbtp'] != 2) {
+                if($_SESSION['tbtp'] != 2 && $_SESSION['tbtp'] != 4) {
                     echo "<p>Convidados Desconfirmados: ".$convidados_dconfirmados." <a href='alt_tbl.php?tb=2'>( Detalhes )</a></p>";
                 }
                 echo "<p>Total de Convidados: ".$convidados;
@@ -59,43 +59,73 @@ unset($_SESSION['nome_convidado']);
                     echo "<a href='alt_tbl.php?tb=3'>( Detalhes )</a></p>";
                 }   
             echo "</div>";
-            echo "<div id='tbl_msg'>";
-                echo "<a href='alt_tbl.php?tb=NULL'>Ver mensagens dos Convidados</a>";
-            echo "</div>";
-            echo "<table id='lista_convidados'>";
-                echo "<thead>";
-                    echo "<tr>";
-                        echo "<th>Nome Completo</th>";
-                        echo "<th colspan='3'>Confirmação</th>";
-                    echo "</tr>";
-                echo "</thead>";
-                echo "<tbody>";
-                    foreach ($lista_convidados as $key) {
-                        $nome = $key['nome_convidado'];
+            if($_SESSION['tbtp'] != 4) {
+                echo "<div id='tbl_msg'>";
+                    echo "<a href='alt_tbl.php?tb='''>Ver mensagens dos Convidados</a>";
+                echo "</div>";
+            
+                echo "<table id='lista_convidados'>";
+                    echo "<thead>";
                         echo "<tr>";
-                            echo "<td>".$key['nome_convidado']."</td>";
-                            if($key['confirm'] == 0){
-                                echo "<td id='inf01'>NÃO CONFIRMADO</td>";
-                                echo "<td><a href='confirmar.php?nome=$nome'>Confirmar Presença</a></td>";
-                            } else if($key['confirm'] == 1) {
-                                echo "<td id='inf01' style='color: rgb(28, 206, 28)'>CONFIRMADO</td>";
-                                echo "<td><a href='desconfirmar.php?nome=$nome'>Desconfirmar Presença</a></td>";
-                            } else {
-                                echo "<td id='inf01'>DESCONFIRMADO</td>";
-                                echo "<td><a href='confirmar.php?nome=$nome'>Reconfirmar Presença</a></td>";
-                            }
-                            echo "<td><a href='confirm_excl.php?nome=$nome'>Excluir Convidado</a></td>";
+                            echo "<th>Nome Completo</th>";
+                            echo "<th colspan='3'>Confirmação</th>";
                         echo "</tr>";
-                    }
-                echo "</tbody>";
-            echo "</table>";
-
+                    echo "</thead>";
+                    echo "<tbody>";
+                        foreach ($lista_convidados as $key) {
+                            $nome = $key['nome_convidado'];
+                            echo "<tr>";
+                                echo "<td>".$key['nome_convidado']."</td>";
+                                if($key['confirm'] == 0){
+                                    echo "<td id='inf01'>NÃO CONFIRMADO</td>";
+                                    echo "<td><a href='confirmar.php?nome=$nome'>Confirmar Presença</a></td>";
+                                } else if($key['confirm'] == 1) {
+                                    echo "<td id='inf01' style='color: rgb(28, 206, 28)'>CONFIRMADO</td>";
+                                    echo "<td><a href='desconfirmar.php?nome=$nome'>Desconfirmar Presença</a></td>";
+                                } else {
+                                    echo "<td id='inf01'>DESCONFIRMADO</td>";
+                                    echo "<td><a href='confirmar.php?nome=$nome'>Reconfirmar Presença</a></td>";
+                                }
+                                echo "<td><a href='confirm_excl.php?nome=$nome'>Excluir Convidado</a></td>";
+                            echo "</tr>";
+                        }
+                    echo "</tbody>";
+                echo "</table>";
+            } else {
+                $mensagens = $repositorio->PuxarMensagens();
+                foreach ($mensagens as $key) {
+                    $nome = $key['nome_convidado'];
+                    $mensagem = $key['msg_convidado'];
+                    echo "<div id='cx_msg'>";
+                        echo "<p id='cp_nome'>".$nome."</p>";
+                        echo "<p id='cp_msg'>".$mensagem."</p>";
+                    echo "</div>";
+                }
+            }
         ?>
         <?php
             if(isset($_SESSION['mensagem'])){
                 echo $_SESSION['mensagem'];
             }
-        ?>
+            echo $data_atual = strtotime(date("Y-m-d h:i"));
+            echo "<br>";
+            echo $dia_evento = strtotime(date("2024-12-22 17:30"));
+            echo "<br>";
+
+            $diferenca = $dia_evento - $data_atual;
+
+            echo $dias = ($diferenca / 86400);
+            echo "<br>";
+
+            
+            //$data = 
+            //$timestamp = strtotime($data . "+6 months");    
+            //$dia_hora_atual = strtotime(date("Y-m-d"));
+            //$dia_hora_evento = strtotime(date($timestamp));
+            //$diferenca = $dia_hora_evento - $dia_hora_atual;
+            //$dias = ($diferenca / 86400);
+            //echo "$dias dia(s)";
+            ?>
     </main>
 </body>
 </html>

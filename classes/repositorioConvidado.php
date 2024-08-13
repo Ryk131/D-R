@@ -17,6 +17,7 @@ interface IRepositorioConvidados {
     public function GuardarMensagem($nome_convidado,$msg_convidado);
     public function NumConv($conf);
     public function NumTot();
+    public function PuxarMensagens();
 }
  
 class RepositorioConvidadosMySQL implements IRepositorioConvidados
@@ -126,6 +127,13 @@ class RepositorioConvidadosMySQL implements IRepositorioConvidados
         $sql = "SELECT * FROM tbl_convidados";
         $linha = $this->conexao->obtemNumeroLinhas($sql);
         return $linha;
+    }
+
+    public function PuxarMensagens()
+    {
+        $sql = "SELECT * FROM mensagens_convidados";
+        $msgs = $this->conexao->executarQuery($sql);
+        return $msgs;
     }
 }
    
