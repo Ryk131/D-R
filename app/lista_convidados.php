@@ -107,15 +107,40 @@ unset($_SESSION['nome_convidado']);
             if(isset($_SESSION['mensagem'])){
                 echo $_SESSION['mensagem'];
             }
-            echo $data_atual = strtotime(date("Y-m-d h:i"));
-            echo "<br>";
-            echo $dia_evento = strtotime(date("2024-12-22 17:30"));
-            echo "<br>";
+            $data_atual = strtotime(date("Y-m-d h:i"));
 
-            $diferenca = $dia_evento - $data_atual;
+            $dia_evento = strtotime(date("2024-08-12 22:30"));
+            
 
-            echo $dias = ($diferenca / 86400);
+            $diferenca_total = $dia_evento - $data_atual;
+
+            $diferenca_dias = $diferenca_total % 86400;
+            
+
+            $diferenca_horas = $diferenca_dias % 3600;
+            
+
+            $diferenca_minutos = $diferenca_horas % 60;
+            
+
+            
+            echo "DIAS: ".($diferenca_total - $diferenca_dias) / 86400;
             echo "<br>";
+            echo "HORAS: ".($diferenca_dias - $diferenca_horas) / 3600;
+            echo "<br>";
+            echo "MINUTOS: ".($diferenca_horas - $diferenca_minutos) / 60;
+
+
+
+            
+
+
+
+
+            $dias = ($diferenca_total / 86400);
+            
+
+            
 
             
             //$data = 
