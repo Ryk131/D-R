@@ -104,12 +104,15 @@ unset($_SESSION['nome_convidado']);
             }
         ?>
         <?php
+            date_default_timezone_set('America/Sao_Paulo');
+
             if(isset($_SESSION['mensagem'])){
                 echo $_SESSION['mensagem'];
             }
             $data_atual = strtotime(date("Y-m-d h:i"));
+            
 
-            $dia_evento = strtotime(date("2024-08-12 22:30"));
+            $dia_evento = strtotime(date("2024-12-22 17:30"));
             
 
             $diferenca_total = $dia_evento - $data_atual;
@@ -124,32 +127,10 @@ unset($_SESSION['nome_convidado']);
             
 
             
-            echo "DIAS: ".($diferenca_total - $diferenca_dias) / 86400;
-            echo "<br>";
-            echo "HORAS: ".($diferenca_dias - $diferenca_horas) / 3600;
-            echo "<br>";
-            echo "MINUTOS: ".($diferenca_horas - $diferenca_minutos) / 60;
+            $dias = ($diferenca_total - $diferenca_dias) / 86400;
+            $horas = ($diferenca_dias - $diferenca_horas) / 3600;
+            $minutos = ($diferenca_horas - $diferenca_minutos) / 60;
 
-
-
-            
-
-
-
-
-            $dias = ($diferenca_total / 86400);
-            
-
-            
-
-            
-            //$data = 
-            //$timestamp = strtotime($data . "+6 months");    
-            //$dia_hora_atual = strtotime(date("Y-m-d"));
-            //$dia_hora_evento = strtotime(date($timestamp));
-            //$diferenca = $dia_hora_evento - $dia_hora_atual;
-            //$dias = ($diferenca / 86400);
-            //echo "$dias dia(s)";
             ?>
     </main>
 </body>
