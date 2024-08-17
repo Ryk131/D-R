@@ -20,11 +20,17 @@
     src: url('../fontes/Courgette-Regular.ttf') format(truetype);
 }
 
+@font-face {
+    font-family: 'DM';
+    src: url('../fontes/DMSerifDisplay-Regular.ttf') format(truetype);
+}
+
 :root {
     --fonte1: 'angelia beauty';
     --fonte2: 'normal';
     --fonte3: 'pacifico regular';
     --fonte4: 'courgete regular';
+    --fonte5: 'DM';
     --cor1: #D789D9;
     --cor2: #A260BF;
     --cor3: #6C3873;
@@ -266,6 +272,20 @@ nav > a:hover {
 #form-enviar > input:hover {
     background-color: var(--cor3);
 
+}
+
+#cont {
+    margin: auto;
+    margin-top: 10px;
+    border: double 10px var(--cor2);
+    padding: 10px;
+    width: 60vw;
+    margin-bottom: 15px;
+}
+
+#cont > p {
+    font-size: 5em;
+    font-family: var(--fonte5);
 }
 
 

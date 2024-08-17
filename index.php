@@ -13,8 +13,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>D & R</title>
     <link rel="stylesheet" href="estilos/style.css">
+    <script type="text/javascript">  
+		function ajax(){
+			var req = new XMLHttpRequest();
+			req.onreadystatechange = function(){
+				if (req.readyState == 4 && req.status == 200) {
+						document.getElementById('cont').innerHTML = req.responseText;
+				}
+			}
+			req.open('GET', 'app/cont_regr/contagem.php', true);
+			req.send();
+		}
+	
+		setInterval(function(){ajax();}, 1000); 
+	</script>
 </head>
-<body>
+<body onload="ajax();">
     <header>
         <h1>Danielly & Rykelmy</h1>
         <nav>
@@ -78,6 +92,9 @@
                 <p>Data: 22/12/2024 <br>
                 Horário: 17:00Hrs</p>
             </div>
+            <div id="cont">
+
+			</div>
         </section>
         <section class="imagem" id="imagem2">
             <p id="dizeres">"E ao anjo da igreja que está em Filadélfia escreve: Isto diz o que é santo, o que é verdadeiro, o que tem a chave de Davi; o que abre, e ninguém fecha; e fecha, e ninguém abre:"<br>
