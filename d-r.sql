@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Tempo de geração: 25-Jun-2024 às 01:46
--- Versão do servidor: 10.4.21-MariaDB
--- versão do PHP: 8.0.11
+-- Host: localhost:3306
+-- Tempo de geração: 13/08/2024 às 00:22
+-- Versão do servidor: 10.5.20-MariaDB
+-- Versão do PHP: 7.3.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,34 +18,36 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Banco de dados: `d-r`
+-- Banco de dados: `id22023606_dr`
 --
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `mensagens_convidados`
+-- Estrutura para tabela `mensagens_convidados`
 --
 
 CREATE TABLE `mensagens_convidados` (
   `nome_convidado` varchar(200) NOT NULL,
-  `msg_convidado` varchar(1000) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `msg_convidado` varchar(8000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `mensagens_convidados`
+-- Despejando dados para a tabela `mensagens_convidados`
 --
 
 INSERT INTO `mensagens_convidados` (`nome_convidado`, `msg_convidado`) VALUES
 ('Rykelmy', 'Eu te amo Danielly Neris Morais da Silva'),
 ('Rykelmy', 'Eu te amo Danielly Neris Morais da Silva'),
 ('Danielly', 'Eu amo o Rykelmy Barbosa Lima Ferreira'),
-('Danielly', 'AA');
+('Danielly', 'AA'),
+('David o Pai', 'Oi A Paz de Deus '),
+('', '');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_convidados`
+-- Estrutura para tabela `tbl_convidados`
 --
 
 CREATE TABLE `tbl_convidados` (
@@ -54,22 +56,22 @@ CREATE TABLE `tbl_convidados` (
   `doc_convidado` bigint(11) DEFAULT NULL,
   `fam_conv` varchar(100) NOT NULL,
   `confirm` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Extraindo dados da tabela `tbl_convidados`
+-- Despejando dados para a tabela `tbl_convidados`
 --
 
 INSERT INTO `tbl_convidados` (`id_convidado`, `nome_convidado`, `doc_convidado`, `fam_conv`, `confirm`) VALUES
-(2, 'Rykelmy Barbosa Lima Ferreira', NULL, '', 0),
-(20, 'Edinaldo Sergio Ferreira', NULL, 'EDINALDO', 0),
-(21, 'Carla Barbosa Lima Ferreira', NULL, 'EDINALDO', 0),
-(22, 'Ryciery Barbosa Lima Ferreira', NULL, 'EDINALDO', 0),
-(23, 'Marilda Barbosa ', NULL, 'EDINALDO', 0),
-(27, 'Danielly Neris Moraes da Silva', NULL, '', 0),
-(28, 'David Cesar da Silva', NULL, 'DAVID', 0),
-(29, 'Fernanda Neris Moraes da Silva', NULL, 'DAVID', 0),
-(30, 'Paulo Cesar Neris Moraes da Silva', NULL, 'DAVID', 0),
+(2, 'Rykelmy Barbosa Lima Ferreira', NULL, '', 1),
+(20, 'Edinaldo Sergio Ferreira', NULL, 'EDINALDO', 1),
+(21, 'Carla Barbosa Lima Ferreira', NULL, 'EDINALDO', 1),
+(22, 'Ryciery Barbosa Lima Ferreira', NULL, 'EDINALDO', 1),
+(23, 'Marilda Barbosa ', NULL, 'EDINALDO', 1),
+(27, 'Danielly Neris Moraes da Silva', NULL, '', 1),
+(28, 'David Cesar da Silva', NULL, 'DAVID', 1),
+(29, 'Fernanda Neris Moraes da Silva', NULL, 'DAVID', 1),
+(30, 'Paulo Cesar Neris Moraes da Silva', NULL, 'DAVID', 1),
 (34, 'Miguel Ferreira ', NULL, 'MIGUEL ', 0),
 (35, 'Maria de Lourdes Ferreira ', NULL, 'MIGUEL', 0),
 (36, 'Edivaldo Ferreira ', NULL, 'EDIVALDO', 0),
@@ -200,7 +202,6 @@ INSERT INTO `tbl_convidados` (`id_convidado`, `nome_convidado`, `doc_convidado`,
 (163, 'Felipe Romão', NULL, 'JUNIOR', 0),
 (164, 'Isaac Romão ', NULL, 'JUNIOR ', 0),
 (165, 'Pedro Romão ', NULL, 'JUNIOR ', 0),
-(166, 'Jessica Bueno ', NULL, 'JUNIOR ', 0),
 (167, 'Jorge Jesus', NULL, 'JORGE JESUS', 0),
 (168, 'Ruth Bezerra ', NULL, 'JORGE JESUS', 0),
 (169, 'Samuel Bezerra', NULL, 'JORGE JESUS', 0),
@@ -302,8 +303,8 @@ INSERT INTO `tbl_convidados` (`id_convidado`, `nome_convidado`, `doc_convidado`,
 (267, 'Ana Thaina Costa', NULL, 'ANA THAINA', 0),
 (268, 'Isis Costa', NULL, 'ANA THAINA', 0),
 (269, 'Jhozi Monteiro', NULL, 'JHOZI MONTEIRO', 0),
-(270, 'Jaqueline Monteiro', NULL, 'JHOZI MONTEIRO', 0),
-(271, 'Judi Glécia Calvalcante', NULL, 'JUDI', 0),
+(270, 'Jaqueline Negrão', NULL, 'JHOZI MONTEIRO', 0),
+(271, 'Judiglécia Calvalcante', NULL, 'JUDI', 0),
 (272, 'Tabata Francine', NULL, 'TABATA FRANCINE', 0),
 (273, 'Isac Bochi', NULL, 'ISAC BOCHI', 0),
 (274, 'Marli Bochi', NULL, 'ISAC BOCHI', 0),
@@ -316,33 +317,85 @@ INSERT INTO `tbl_convidados` (`id_convidado`, `nome_convidado`, `doc_convidado`,
 (281, 'Mari Nogueira', NULL, 'MARI NOGUEIRA', 0),
 (282, 'Marcio Muzeli', NULL, 'MARCIO MUZELI', 0),
 (283, 'Leiliane Muzeli', NULL, 'MARCIO MUZELI', 0),
-(284, 'Mayara Gomes', NULL, 'MAYARA GOMES', 0),
+(284, 'Mayara Aline do Prado Gomes', NULL, 'MAYARA GOMES', 0),
 (285, 'Jheniany Ribeiro', NULL, 'JHENIANY RIBEIRO', 0),
 (286, 'Lucas Leonardo', NULL, 'LUCAS LEONARDO', 0),
 (287, 'Kauany Oliveira', NULL, 'LUCAS LEONARDO', 0),
 (288, 'Moises Pereira', NULL, 'MOISES PEREIRA', 0),
 (289, 'Katia Pereira', NULL, 'MOISES PEREIRA', 0),
-(290, 'Guilherme Pereira', NULL, 'MOISES PEREIRA', 0);
+(290, 'Guilherme Pereira', NULL, 'MOISES PEREIRA', 0),
+(291, 'João Barroso', NULL, 'JOAO BARROSO', 0),
+(292, 'Neusa Barroso', NULL, 'JOAO BARROSO', 0),
+(293, 'Elias Kaleb Negreiros ', NULL, 'ELIAS KALEB NEGREIROS', 0),
+(294, 'Agata Sanches ', NULL, 'AGATA SANCHES', 0),
+(295, 'Ana Sanches ', NULL, 'AGATA SANCHES ', 0),
+(296, 'Carmen Soares ', NULL, 'CARMEN SOARES ', 0),
+(297, 'José Soares', NULL, 'CARMEN SOARES ', 0),
+(298, 'Daniel Soares ', NULL, 'CARMEN SOARES ', 0),
+(299, 'Tequel Soares ', NULL, 'TEQUEL SOARES ', 0),
+(300, 'Thamires Soares ', NULL, 'TEQUEL SOARES ', 0),
+(301, 'Melissa Soares ', NULL, 'TEQUEL SOARES ', 0),
+(302, 'Miguel Soares ', NULL, 'TEQUEL SOARES ', 0),
+(303, 'Maricilo Vilas Boas ', NULL, 'MARCILIO VILAS BOAS ', 0),
+(304, 'Maria Vilas Boas ', NULL, 'MARCILIO VILAS BOAS ', 0),
+(305, 'Sara Ponce ', NULL, 'ADEMIR PONCE ', 0),
+(306, 'Ademir Ponce ', NULL, 'ADEMIR PONCE ', 0),
+(307, 'Gabriel Ponce ', NULL, 'ADEMIR PONCE ', 0),
+(308, 'Alexandre Oliviera ', NULL, 'ALEXANDRE OLIVEIRA ', 0),
+(309, 'Patricia Oliveira ', NULL, 'ALEXANDRE OLIVEIRA ', 0),
+(310, 'Thayane Oliveira ', NULL, 'ALEXANDRE OLIVEIRA', 0),
+(311, 'Abner Oliveira ', NULL, 'ALEXANDRE OLIVEIRA ', 0),
+(312, 'Samuel de Britto ', NULL, 'SAMUEL DE BRITTO ', 0),
+(313, 'Kelly de Britto ', NULL, 'SAMUEL DE BRITTO', 0),
+(314, 'Rute de Britto ', NULL, 'SAMUEL DE BRITTO', 0),
+(315, 'Ricardo Marangon Castilho', NULL, 'RICARDO MARANGON ', 0),
+(316, 'Silvana da Silva Castilho', NULL, 'RICARDO MARANGON\r\n', 0),
+(317, 'Ruann Monteiro', NULL, 'JHOZI MONTEIRO', 0),
+(318, 'Yann Monteiro', NULL, 'JHOZI MONTEIRO', 0),
+(319, 'Alessandra Pachiardi Félix', NULL, 'ALESSANDRA PACHIARDI', 0),
+(320, 'Ivan Benedito Félix da Costa', NULL, 'ALESSANDRA PACHIARDI', 0),
+(321, 'Samuel Pachiardi Félix', NULL, 'ALESSANDRA PACHIARDI', 0),
+(322, 'Cleiton Eduardo Marques da Silva', NULL, 'CLEITON EDUARDO', 0),
+(323, 'Elisabete dos Santos Marques da Silva', NULL, 'CLEITON EDUARDO', 0),
+(324, 'Nicolas Eduardo Marques da Silva', NULL, 'CLEITON EDUARDO', 0),
+(325, 'Pietro Henrique Marques da Silva', NULL, 'CLEITON EDUARDO', 0),
+(326, 'Douglas de Oliveira', NULL, 'MAYARA GOMES', 0),
+(327, 'Eliel Alves', NULL, 'ELIEL ALVES', 0),
+(328, 'Cleide Alves', NULL, 'ELIEL ALVES', 0),
+(329, 'Caroline Alves', NULL, 'ELIEL ALVES', 0),
+(330, 'Nicole Alves', NULL, 'ELIEL ALVES', 0),
+(331, 'Emanuelle Alves', NULL, 'ELIEL ALVES', 0),
+(332, 'Altemar Calado', NULL, 'ALTEMAR CALADO', 0),
+(333, 'Patricia de Souza Calado', NULL, 'ALTEMAR CALADO', 0),
+(334, 'Pamela Calado', NULL, 'ALTEMAR CALADO', 0),
+(335, 'Tabata Francine ', NULL, 'TABATA FRANCINE ', 0),
+(336, 'Rodrigo Gonçalves Routh ', NULL, 'RODRIGO GONÇALVES ', 0),
+(337, 'Rafaella Routh', NULL, 'RODRIGO GONÇALVES ', 0),
+(338, 'Rebeca Routh', NULL, 'RODRIGO GONÇALVES ', 0),
+(339, 'Radassa Routh ', NULL, 'RODRIGO GONÇALVES', 0),
+(340, 'Rozimar Gonçalves Gomes ', NULL, 'RODRIGO GONÇALVES ', NULL),
+(341, 'Vitória Adriely Rinco', NULL, 'VITÓRIA ADRIELY', 0),
+(342, 'Ygor Tenório', NULL, 'VITÓRIA ADRIELY', 0);
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `tbl_convidados`
+-- Índices de tabela `tbl_convidados`
 --
 ALTER TABLE `tbl_convidados`
   ADD PRIMARY KEY (`id_convidado`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
 -- AUTO_INCREMENT de tabela `tbl_convidados`
 --
 ALTER TABLE `tbl_convidados`
-  MODIFY `id_convidado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=291;
+  MODIFY `id_convidado` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=343;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
