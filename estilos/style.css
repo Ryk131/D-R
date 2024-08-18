@@ -288,6 +288,11 @@ nav > a:hover {
     font-family: var(--fonte5);
 }
 
+#cont > a {
+    margin-right: 10vw;
+}
+
+
 
 
 
