@@ -12,28 +12,34 @@ $diferenca_minutos = $diferenca_horas % 60;
 $dias = ($diferenca_total - $diferenca_dias) / 86400;
 $horas = ($diferenca_dias - $diferenca_horas) / 3600;
 $minutos = ($diferenca_horas - $diferenca_minutos) / 60;
-$segundos = $diferenca_total
+$segundos = 60 - date("s");
 
-echo "<div>";
+
+echo "<div id='t'>";
     echo "<p>".$dias."</p>";
     echo "<a>Dias</a>";
 echo "</div>";
-echo "<div>";
+echo "<div id='t' class='v'>";
     echo "<p>:</p>";
 echo "</div>";
-echo "<div>";
+echo "<div id='t'>";
     echo "<p>".$horas."</p>";
     echo "<a>Horas</a>";
 echo "</div>";
-echo "<div>";
+echo "<div id='t' class='v'>";
     echo "<p>:</p>";
 echo "</div>";
+echo "<div id='t'>";
     echo "<p>".$minutos."</p>";
     echo "<a>Minutos</a>";
 echo "</div>";
+echo "<div id='t' class='v'>";
+    echo "<p>:</p>";
+echo "</div>";
+echo "<div id='t'>";
+    echo "<p>".$segundos."</p>";
+    echo "<a>Segundos</a>";
+echo "</div>";
 
-echo "<p>".$dias." : ".$horas." : ".$minutos."</p>";
-echo "<a>Dias</a>
-<a>Horas</a>
-<a>Minutos</a>";
+
 ?>

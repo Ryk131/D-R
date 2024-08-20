@@ -34,8 +34,40 @@ if(isset($_SESSION['nome_convidado'])) {
     <meta name="viewport" content="width=[device-width], initial-scale=1.0">
     <title>Pesquisa</title>
     <link rel="stylesheet" href="../estilos/confirm-presenc.css">
+    <script>
+        function preload(){
+            imgs=Array('img03.jpeg','img04.jpeg','img01.jpeg');
+            imgQtde = imgs.length;
+            for(i=0;i<imgQtde;i++) {
+                var preloading = new Image ();
+                preloading.src=imgs[i];
+            }
+        }
+
+        function iniciarSlider() {
+            min=0;
+            max=2;
+            im=0;
+            preload();
+            carregaFoto(im);
+            tmr = setInterval(trocaFoto,4000);
+        }
+
+        function carregaFoto(foto) {
+            img = imgs[foto];
+            document.getElementById("slide").style.backgroundImage="URL(../imagens/"+img+")";
+        }
+
+        function trocaFoto() {
+            if(im >= imgQtde){
+                im = 0;
+            }
+            carregaFoto(im);
+            im++;
+        }
+    </script>
 </head> 
-<body>
+<body onload="iniciarSlider()">
     <header>
         <h1>Danielly & Rykelmy</h1>
         <nav>
@@ -122,9 +154,9 @@ if(isset($_SESSION['nome_convidado'])) {
             <?php
         }
         ?> 
-        
-        <img id="img01" src="../imagens/img02.jpeg" alt="">
-
+        <div id="slide">
+            
+        </div>
     </main>
 </body>
 </html>

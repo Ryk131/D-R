@@ -201,3 +201,9 @@ th {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+#slide {
+    width: 400px;
+    height: 750px;
+    transition:background-image 2s;
+}

@@ -279,18 +279,29 @@ nav > a:hover {
     margin-top: 10px;
     border: double 10px var(--cor2);
     padding: 10px;
-    width: 60vw;
+    width: 80vw;
     margin-bottom: 15px;
 }
 
-#cont > p {
-    font-size: 5em;
+#t {
+    display: inline-block;
+    margin: auto;
+    height: 13vh;
+    width: auto;
+    vertical-align: middle;
+    margin: 10px;
+}
+
+#t > p {
+    font-size: 2.2em;
     font-family: var(--fonte5);
 }
 
-#cont > a {
-    margin-right: 10vw;
+.v {
+    margin-top: 1000px;
 }
+
+
 
 
 
