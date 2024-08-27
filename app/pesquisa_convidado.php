@@ -35,6 +35,8 @@ if(isset($_SESSION['nome_convidado'])) {
     <title>Pesquisa</title>
     <link rel="stylesheet" href="../estilos/confirm-presenc.css">
     <script>
+        imgs=Array('img03.jpeg','img01.jpeg');
+        imgQtde = imgs.length;
 
         function iniciarSlider() {
             min=0;
