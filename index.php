@@ -14,6 +14,15 @@
     <title>D & R</title>
     <link rel="stylesheet" href="estilos/style.css">
     <script type="text/javascript">  
+        function preload(){
+            imgs=Array('img03.jpeg','img01.jpeg');
+            imgQtde = imgs.length;
+            for(i=0;i<imgQtde;i++) {
+                var preloading = new Image ();
+                preloading.src=imgs[i];
+            }
+        }
+
 		function ajax(){
 			var req = new XMLHttpRequest();
 			req.onreadystatechange = function(){
