@@ -35,8 +35,14 @@ if(isset($_SESSION['nome_convidado'])) {
     <title>Pesquisa</title>
     <link rel="stylesheet" href="../estilos/confirm-presenc.css">
     <script>
-        imgs=Array('img03.jpeg','img01.jpeg');
-        imgQtde = imgs.length;
+        function preload(){
+            imgs=Array('../imagens/img03.jpeg','../imagens/img01.jpeg');
+            imgQtde = imgs.length;
+            for(i=0;i<imgQtde;i++) {
+                var preloading = new Image ();
+                preloading.src=imgs[i];
+            }
+        }
 
         function iniciarSlider() {
             min=0;
@@ -44,20 +50,20 @@ if(isset($_SESSION['nome_convidado'])) {
             im=0;
             preload();
             carregaFoto(im);
-            tmr = setInterval(trocaFoto,5000);
+            tmr = setInterval(trocaFoto,3000);
         }
 
         function carregaFoto(foto) {
             img = imgs[foto];
-            document.getElementById("slide").style.backgroundImage="URL(../imagens/"+img+")";
+            document.getElementById("slide").style.backgroundImage="URL("+img+")";
         }
 
         function trocaFoto() {
+            im++;
             if(im >= imgQtde){
                 im = 0;
             }
             carregaFoto(im);
-            im++;
         }
     </script>
 </head> 
@@ -152,5 +158,6 @@ if(isset($_SESSION['nome_convidado'])) {
             
         </div>
     </main>
+    
 </body>
 </html>
