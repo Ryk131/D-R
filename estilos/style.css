@@ -271,7 +271,6 @@ nav > a:hover {
 
 #form-enviar > input:hover {
     background-color: var(--cor3);
-
 }
 
 #cont {
@@ -293,7 +292,7 @@ nav > a:hover {
 }
 
 #t > p {
-    font-size: 2.2em;
+    font-size: 2em;
     font-family: var(--fonte5);
 }
 
