@@ -274,11 +274,11 @@ nav > a:hover {
 }
 
 #cont {
-    margin: auto;
+    margin: 15px;
     margin-top: 10px;
     border: double 10px var(--cor2);
     padding: 10px;
-    width: 90vw;
+    width: 85vw;
     margin-bottom: 15px;
 }
 
@@ -292,7 +292,7 @@ nav > a:hover {
 }
 
 #t > p {
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-family: var(--fonte5);
 }
 
