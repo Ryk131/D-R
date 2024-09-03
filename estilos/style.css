@@ -278,7 +278,7 @@ nav > a:hover {
     margin-top: 10px;
     border: double 10px var(--cor2);
     padding: 10px;
-    width: 90vw;
+    width: 95vw;
     margin-bottom: 15px;
 }
 
@@ -288,7 +288,7 @@ nav > a:hover {
     height: 13vh;
     width: auto;
     vertical-align: middle;
-    margin: 5px;
+    margin: 3px;
 }
 
 #t > p {
