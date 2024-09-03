@@ -277,15 +277,15 @@ nav > a:hover {
     margin: auto;
     margin-top: 10px;
     border: double 10px var(--cor2);
-    padding: 10px;
-    width: 95vw;
+    padding: 5px;
+    width: 75vw;
     margin-bottom: 15px;
 }
 
 #t {
     display: inline-block;
     margin: auto;
-    height: 13vh;
+    height: 8vh;
     width: auto;
     vertical-align: middle;
     margin: 3px;
@@ -297,7 +297,7 @@ nav > a:hover {
 }
 
 .v {
-    margin-top: 1000px;
+    
 }
 
 
