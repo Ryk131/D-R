@@ -55,6 +55,7 @@ unset($_SESSION['nome_convidado']);
                     echo "<p>Convidados Desconfirmados: ".$convidados_dconfirmados." <a href='alt_tbl.php?tb=2'>( Detalhes )</a></p>";
                 }
                 echo "<p>Total de Convidados: ".$convidados;
+                echo "<p><a href=''>Lista por Famílias</a></p>";
                 if($_SESSION['tbtp'] != 3) {
                     echo "<a href='alt_tbl.php?tb=3'>( Detalhes )</a></p>";
                 }   
