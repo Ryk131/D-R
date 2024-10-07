@@ -55,12 +55,37 @@ unset($_SESSION['nome_convidado']);
                     echo "<p>Convidados Desconfirmados: ".$convidados_dconfirmados." <a href='alt_tbl.php?tb=2'>( Detalhes )</a></p>";
                 }
                 echo "<p>Total de Convidados: ".$convidados;
-                echo "<p><a href=''>Lista por Famílias</a></p>";
                 if($_SESSION['tbtp'] != 3) {
                     echo "<a href='alt_tbl.php?tb=3'>( Detalhes )</a></p>";
-                }   
+                }
+                if($_SESSION['tbtp'] != "FM") {
+                    echo "<p><a href='alt_tbl.php?tb=F'>Lista por Famílias</a></p>";  
+                }
+                 
             echo "</div>";
-            if($_SESSION['tbtp'] != 4) {
+            if($_SESSION['tbtp'] == "FM") {
+                foreach ($lista_convidados as $key) {
+                    if(isset($fmcv)){
+                    
+                    } else {
+                        $fmcv = $key['fam_conv'];
+                    }
+
+                    if($fmcv == $key['fam_conv']) {
+                        
+                    }
+                }
+                echo "<table id='tb_fm'>";
+                    echo "<tr>";
+                        echo "<td>AAAAAAAAA</td>";
+                        echo "<td>BBBBBBBBBBBB</td>";
+                    echo "</tr>";
+                    echo "<tr>";
+                        echo "<td>CCCCCCCCCCCC</td>";
+                        echo "<td>DDDDDDDDDDDDDDD</td>";
+                    echo "</tr>";
+                echo "</table>";
+            } else if($_SESSION['tbtp'] != 4) {
                 echo "<div id='tbl_msg'>";
                     echo "<a href='alt_tbl.php?tb='''>Ver mensagens dos Convidados</a>";
                 echo "</div>";

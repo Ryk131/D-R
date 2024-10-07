@@ -193,3 +193,13 @@ div > p > a:hover {
     font-weight: bold;
     font-size: 1.2em;
 }
+
+#tb_fm {
+    margin: auto;
+    width: 80vw;
+    border: double 10px var(--cor2);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+    margin-top: 25px;
+}

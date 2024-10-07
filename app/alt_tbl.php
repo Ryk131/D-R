@@ -10,7 +10,9 @@ $repositorio = new RepositorioConvidadosMySQL();
 
 $tb = $_GET['tb'];
 
-if($tb == 0) {
+if($tb == "F") {
+    $_SESSION['tbtp'] = "FM";
+} else if($tb == 0) {
     $_SESSION['tbtp'] = 0;
 } else if($tb == 1) {
     $_SESSION['tbtp'] = 1;
