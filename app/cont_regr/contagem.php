@@ -14,32 +14,32 @@ $horas = ($diferenca_dias - $diferenca_horas) / 3600;
 $minutos = ($diferenca_horas - $diferenca_minutos) / 60;
 $segundos = 60 - date("s");
 
-
-echo "<div id='t'>";
-    echo "<p>".$dias."</p>";
-    echo "<a>Dias</a>";
+echo "<div id='txt'>";
+    echo "<div id='t'>";
+        echo "<p>".$dias."</p>";
+        echo "<a>Dias</a>";
+    echo "</div>";
+    echo "<div id='t' class='v'>";
+        echo "<p>:</p>";
+    echo "</div>";
+    echo "<div id='t'>";
+        echo "<p>".$horas."</p>";
+        echo "<a>Horas</a>";
+    echo "</div>";
+    echo "<div id='t' class='v'>";
+        echo "<p>:</p>";
+    echo "</div>";
+    echo "<div id='t'>";
+        echo "<p>".$minutos."</p>";
+        echo "<a>Minutos</a>";
+    echo "</div>";
+    echo "<div id='t' class='v'>";
+        echo "<p>:</p>";
+    echo "</div>";
+    echo "<div id='t'>";
+        echo "<p>".$segundos."</p>";
+        echo "<a>Segundos</a>";
+    echo "</div>";
 echo "</div>";
-echo "<div id='t' class='v'>";
-    echo "<p>:</p>";
-echo "</div>";
-echo "<div id='t'>";
-    echo "<p>".$horas."</p>";
-    echo "<a>Horas</a>";
-echo "</div>";
-echo "<div id='t' class='v'>";
-    echo "<p>:</p>";
-echo "</div>";
-echo "<div id='t'>";
-    echo "<p>".$minutos."</p>";
-    echo "<a>Minutos</a>";
-echo "</div>";
-echo "<div id='t' class='v'>";
-    echo "<p>:</p>";
-echo "</div>";
-echo "<div id='t'>";
-    echo "<p>".$segundos."</p>";
-    echo "<a>Segundos</a>";
-echo "</div>";
-
 
 ?>

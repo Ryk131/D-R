@@ -296,6 +296,10 @@ nav > a:hover {
     font-family: var(--fonte5);
 }
 
+#txt {
+    margin: auto;
+}
+
 
 
 
