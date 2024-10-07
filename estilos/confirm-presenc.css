@@ -206,6 +206,6 @@ th {
     display: block;
     margin: auto;
     width: 400px; 
-    height: 60vh;
+    height: 600px;
     transition:background-image 1s;
 }
