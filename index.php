@@ -46,7 +46,7 @@
             <article id="n-hist">
                 <div id="texto01">
                     <p>
-                        <img id="img01-texto" style="width: 165px;height: 180px;" src="imagens/img01.jpeg">
+                        <img id="img01-texto" style="width: 150px;height: 170px;" src="imagens/img01.jpeg">
                         <a id="espaco">///</a>Bom, está história poderia começar com um Era uma Vez... Mas vamos fugir um pouco ao clichê, Deus alinhou tudo em nossas vidas, planejou detalhe por detalhe e no fim aqui estamos nós prestes a comemorar este momento mais que especial.
                         
                         <br> 
