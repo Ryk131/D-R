@@ -273,7 +273,7 @@ nav > a:hover {
     background-color: var(--cor3);
 }
 
-#cont {
+#cont { 
     margin: auto;
     margin-top: 10px;
     border: double 10px var(--cor2);
