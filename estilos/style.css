@@ -285,7 +285,7 @@ nav > a:hover {
 #t {
     display: inline-block;
     margin: auto;
-    height: 8vh;
+    
     width: auto;
     vertical-align: middle;
     margin: 3px;
@@ -296,9 +296,7 @@ nav > a:hover {
     font-family: var(--fonte5);
 }
 
-#txt {
-    margin: auto;
-}
+
 
 
 
