@@ -34,7 +34,7 @@ unset($_SESSION['nome_convidado']);
 </head>
 <body>
     <header>
-        <h1>Danielly & Rykelmya</h1>
+        <h1>Danielly & Rykelmy</h1>
         <nav>
             <a href="../index.php">Início</a>
             <a href="../index.php?#local">Local e Hora</a>
