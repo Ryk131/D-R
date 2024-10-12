@@ -38,6 +38,8 @@ require_once '../classes/repositorioConvidado.php';
         header('Location: pesquisa_convidado.php');
     } else {
         unset($_SESSION['nome_convidado']);
+        unset($_SESSION['selec_convidado']);
+        unset($_SESSION['mostrar_convidado']);
         $_SESSION['mensagem'] = "Convidado não encontrado";
         header('Location: pesquisa_convidado.php');
     }

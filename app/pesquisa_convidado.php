@@ -154,9 +154,17 @@ if(isset($_SESSION['nome_convidado'])) {
             <?php
         }
         ?> 
-        <div id="slide">
+        <?php
+            if(isset($_SESSION['selec_convidado']) && isset($_SESSION['mostrar_convidado'])){
+
+            } else {
+                ?>
+                <div id="slide">
             
-        </div>
+                </div>
+                <?php
+            }
+        ?>
     </main>
     
 </body>
