@@ -77,12 +77,12 @@ unset($_SESSION['nome_convidado']);
                 }
                 echo "<table id='tb_fm'>";
                     echo "<tr>";
-                        echo "<td>AAAAAAAAA</td>";
+                        echo "<td>AAAAAAAAAAAA</td>";
                         echo "<td>BBBBBBBBBBBB</td>";
                     echo "</tr>";
                     echo "<tr>";
                         echo "<td>CCCCCCCCCCCC</td>";
-                        echo "<td>DDDDDDDDDDDDDDD</td>";
+                        echo "<td>DDDDDDDDDDDD</td>";
                     echo "</tr>";
                 echo "</table>";
             } else if($_SESSION['tbtp'] != 4) {

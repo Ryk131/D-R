@@ -5,6 +5,9 @@ session_start();
 if(isset($_SESSION['tbtp'])) {
     unset($_SESSION['tbtp']);
 }
+if(isset($_SESSION["familias"])){
+    unset($_SESSION["familias"]);
+}
 require_once '../classes/repositorioConvidado.php';
 $repositorio = new RepositorioConvidadosMySQL();
 
@@ -12,6 +15,17 @@ $tb = $_GET['tb'];
 
 if($tb == "F") {
     $_SESSION['tbtp'] = "FM";
+    $lista_convidados = $repositorio->ListarConvidados($_SESSION['tbtp']);
+    foreach ($lista_convidados as $key) {
+        $cont = 1;
+        if(isset($_SESSION["familias"])){
+            echo $key['nome_convidado'];
+            exit;
+        } else {
+            $_SESSION["familias"]["familia{{$cont}}"] = $key['fam_conv'];
+            $_SESSION["familias"]["familia{{$cont}}"]["conv{{$cont}}"] = $key['nome_convidado'];
+        }
+    }
 } else if($tb == 0) {
     $_SESSION['tbtp'] = 0;
 } else if($tb == 1) {

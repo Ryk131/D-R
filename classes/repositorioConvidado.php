@@ -22,7 +22,7 @@ interface IRepositorioConvidados {
  
 class RepositorioConvidadosMySQL implements IRepositorioConvidados
 { 
-    private $conexao; 
+    private $conexao;  
     public function __construct()
     {
         // site -> "localhost","u575402288_RykDany2205","Rykdany@2205","u575402288_d_r"
@@ -55,6 +55,10 @@ class RepositorioConvidadosMySQL implements IRepositorioConvidados
     {
         if($tbtp == 3) {
             $sql = "SELECT * FROM tbl_convidados ORDER BY nome_convidado ASC";
+            $listagem = $this->conexao->executarQuery($sql);
+            return $listagem;
+        } else if($tbtp == "FM") {
+            $sql = "SELECT * FROM tbl_convidados";
             $listagem = $this->conexao->executarQuery($sql);
             return $listagem;
         } else {
