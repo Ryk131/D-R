@@ -205,7 +205,5 @@ th {
 #slide {
     display: block;
     margin: auto;
-    width: 400px; 
-    height: 530px;
     transition:background-image 1s;
 }

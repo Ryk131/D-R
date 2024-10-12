@@ -36,7 +36,7 @@ if(isset($_SESSION['nome_convidado'])) {
     <link rel="stylesheet" href="../estilos/confirm-presenc.css">
     <script>
         function preload(){
-            imgs=Array('../imagens/img03.jpeg','../imagens/img01.jpeg');
+            imgs=Array('../imagens/slide1.jpeg','../imagens/slide2.jpeg');
             imgQtde = imgs.length;
             for(i=0;i<imgQtde;i++) {
                 var preloading = new Image ();
@@ -55,6 +55,13 @@ if(isset($_SESSION['nome_convidado'])) {
 
         function carregaFoto(foto) {
             img = imgs[foto];
+            if(img = '../imagens/slide1.jpeg'){
+                document.getElementById("slide").style.width="400";
+                document.getElementById("slide").style.height="267";
+            } else if(img = '../imagens/slide2.jpeg') {
+                document.getElementById("slide").style.width="353";
+                document.getElementById("slide").style.height="530";
+            }
             document.getElementById("slide").style.backgroundImage="URL("+img+")";
         }
 
@@ -155,14 +162,12 @@ if(isset($_SESSION['nome_convidado'])) {
         }
         ?> 
         <?php
-            if(isset($_SESSION['selec_convidado']) && isset($_SESSION['mostrar_convidado'])){
-
+            if(isset($_SESSION['selec_convidado']) || isset($_SESSION['mostrar_convidado'])){
+                
             } else {
-                ?>
-                <div id="slide">
-            
-                </div>
-                <?php
+                echo "<div id='slide'>";
+                
+                echo "</div>";
             }
         ?>
     </main>
