@@ -58,9 +58,9 @@
                 <div>
                     
                     <p id="texto02">
-                        <img id="img02-texto" src="imagens/img02a.jpeg">
+                        <img id="img02-texto" style="width:170px; height:255px" src="imagens/img02.jpeg">
                         <a id="espaco">///</a>Depois desse primeiro encontro os dois pombinhos foram crescendo, estudaram juntos, se viram na igreja e foram aos poucos criando um sentimento um pelo outro. Após alguns acontecimentos, Rykelmy acabou se mudando e eles perderam o contato por um tempo, se vendo apenas de vez em quando na igreja, mas, eis que uns meses antes de Daniely completar 15 anos de idade surge um interesse, o nada bobo Rykelmy viu a agora linda moça Danielly e se apaixonou, mandou mensagem e após muitas conversas o amor um pelo outro foi crescendo e eis que chega o mês de fevereiro, onde Danielly iria completar 15 anos e com isso ele acabou sendo o príncipe dela em seu aniversário.<br>
-                        <img id="img03-texto" src="imagens/img03a.jpeg">
+                        <img id="img03-texto" style="width:170px; height:255px" src="imagens/img03.jpeg">
                         <a id="espaco">///</a>Após o aniversário de 15 muitas coisas aconteceram, ele errou, se afastou dela, magoou ela, mas Deus ainda não tinha dado um ponto final a essa história de amor, e após 2 anos Deus abriu os caminhos, mexeu nos corações e ele tomou coragem de falar com ela de novo, ela o perdoou, eles passaram a se falar bastante, o interesse foi crescendo cada vez mais e ele não aguentava mais esperar, queria dar logo o próximo passo, com isso eles decidiram buscar a confirmação de Deus, a palavra, assim Deus falou no coração deles, confirmou essa união com a promessa que dela faria uma porta aberta que nada nem ninguém poderia fechar.<br>
                         <a id="espaco">///</a>Depois disso as coisas continuaram caminhando, eles foram se conhecendo mais e mais, se amando mais e mais e agora aqui estamos, prestes a dar o próximo passo nessa linda história de amor
                    </p>
