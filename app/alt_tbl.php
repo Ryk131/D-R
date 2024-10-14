@@ -19,11 +19,11 @@ if($tb == "F") {
     foreach ($lista_convidados as $key) {
         $cont = 1;
         if(isset($_SESSION["familias"])){
-            echo $key['nome_convidado'];
-            exit;
+            
         } else {
-            $_SESSION["familias"]["familia{{$cont}}"] = $key['fam_conv'];
-            $_SESSION["familias"]["familia{{$cont}}"]["conv{{$cont}}"] = $key['nome_convidado'];
+            echo $_SESSION["familias"]["familia $cont"] = $key['fam_conv'];
+            echo $_SESSION["familias"]["familia $cont"]["conv $cont"] = $key['nome_convidado'];
+            exit;
         }
     }
 } else if($tb == 0) {
