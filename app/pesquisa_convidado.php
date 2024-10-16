@@ -92,7 +92,7 @@ if(isset($_SESSION['nome_convidado'])) {
             <p id="form-nome">
                 <label for="nome">Pesquisar Nome</label>
                 <input type="text" name="nome" id="nome" 
-                placeholder="Nome Completo do Convidado" required >
+                placeholder="Nome do Convidado" required >
             </p>
             <p id="form-env">
                 <input id="bt-pesq" type="submit" value=" ">
