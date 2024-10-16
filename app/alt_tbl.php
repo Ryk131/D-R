@@ -16,14 +16,16 @@ $tb = $_GET['tb'];
 if($tb == "F") {
     $_SESSION['tbtp'] = "FM";
     $lista_convidados = $repositorio->ListarConvidados($_SESSION['tbtp']);
+    $cont = 1;
     foreach ($lista_convidados as $key) {
-        $cont = 1;
         if(isset($_SESSION["familias"])){
-            
+            if($_SESSION["familia$cont"]["fam_conv"] == $key['fam_conv']){
+                
+            }
         } else {
-            echo $_SESSION["familias"]["familia $cont"] = $key['fam_conv'];
-            echo $_SESSION["familias"]["familia $cont"]["conv $cont"] = $key['nome_convidado'];
-            exit;
+            $_SESSION['familias'] = true;
+            $_SESSION["familia$cont"]["fam_conv"] = $key['fam_conv'];
+            $_SESSION["familia$cont"]["conv$cont"] = $key['nome_convidado'];
         }
     }
 } else if($tb == 0) {
