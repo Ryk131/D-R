@@ -23,16 +23,19 @@ if($tb == "F") {
             $cont = 1;
             $a = true;
             while($a = true){
-                if(isset($_SESSION["familia$cont"]))..................
-                if($_SESSION["familia$cont"]["fam_conv"] == $key['fam_conv']){
-                    $x = true;
-                    while($x = true){
-                        if(isset($_SESSION["familia$cont"]["conv$conv_cont"])){
-                            $conv_cont++;
-                        } else {
-                            $_SESSION["familia$cont"]["conv$conv_cont"] = $key["nome_convidado"];
-                            $x = false;
+                if(isset($_SESSION["familia$cont"])){
+                    if($_SESSION["familia$cont"]["fam_conv"] == $key['fam_conv']){
+                        $x = true;
+                        while($x = true){
+                            if(isset($_SESSION["familia$cont"]["conv$conv_cont"])){
+                                $conv_cont++;
+                            } else {
+                                $_SESSION["familia$cont"]["conv$conv_cont"] = $key["nome_convidado"];
+                                $x = false;
+                            }
                         }
+                    } else {
+                        
                     }
                 } else {
                     
