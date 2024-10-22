@@ -34,11 +34,12 @@ if($tb == "F") {
                                 $x = false;
                             }
                         }
+                        $a = false;
                     } else {
-                        
+                        $cont++;
                     }
                 } else {
-                    
+                    $_SESSION["familia$cont"]["fam_conv"] = $key["fam_conv"]
                 }
             }
         } else {
