@@ -22,11 +22,11 @@ if($tb == "F") {
             $conv_cont = 1;
             $cont = 1;
             $a = true;
-            while($a = true){
+            while($a == true){
                 if(isset($_SESSION["familia$cont"])){
                     if($_SESSION["familia$cont"]["fam_conv"] == $key['fam_conv']){
                         $x = true;
-                        while($x = true){
+                        while($x == true){
                             if(isset($_SESSION["familia$cont"]["conv$conv_cont"])){
                                 $conv_cont++;
                             } else {
@@ -39,9 +39,10 @@ if($tb == "F") {
                         $cont++;
                     }
                 } else {
-                    $_SESSION["familia$cont"]["fam_conv"] = $key["fam_conv"]
+                    $_SESSION["familia$cont"]["fam_conv"] = $key["fam_conv"];
                 }
             }
+            
         } else {
             $_SESSION['familias'] = true;
             $_SESSION["familia$cont"]["fam_conv"] = $key['fam_conv'];

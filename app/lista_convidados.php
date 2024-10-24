@@ -44,6 +44,19 @@ unset($_SESSION['nome_convidado']);
     </header>
     <main>
         <?php
+            $cont = 1;
+            $a = true;
+            while($a == true){
+                print_r($_SESSION["familia$cont"]);
+                echo "<br>";
+                $cont++;
+                if(isset($_SESSION["familia$cont"])){
+
+                } else {
+                    $a = false;
+                }
+            }
+            
             echo "<div id='tbls'>";
                 if($_SESSION['tbtp'] != 1 && $_SESSION['tbtp'] != 4) {
                     echo "<p>Convidados Confirmados: ".$convidados_confirmados." <a href='alt_tbl.php?tb=1'>( Detalhes )</a></p>";
