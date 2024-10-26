@@ -14,10 +14,8 @@ $nome_convidado = $_GET['nome'];
 
 $ConfirmarPresenca = $repositorio->ConfirmarPresenca($confirm,$nome_convidado);
 
-if(isset($_SESSION['admin'])){
-    header('Location: lista_convidados.php');
-} else {
-    header('Location: pesquisa_convidado.php');
-}
+
+header('Location: pesquisa_convidado.php');
+
 
 ?>
