@@ -2,6 +2,13 @@
  
 session_start();
 
+
+$cont = 1;
+while(($_SESSION["familia$cont"])){
+    unset($_SESSION["familia$cont"]);
+    $cont++;
+}
+
 if(isset($_SESSION['tbtp'])) {
     unset($_SESSION['tbtp']);
 }
