@@ -44,18 +44,6 @@ unset($_SESSION['nome_convidado']);
     </header>
     <main>
         <?php
-            $cont = 1;
-            $a = true;
-            while($a == true){
-                print_r($_SESSION["familia$cont"]);
-                echo "<br>";
-                $cont++;
-                if(isset($_SESSION["familia$cont"])){
-
-                } else {
-                    $a = false;
-                }
-            }
             
             echo "<div id='tbls'>";
                 if($_SESSION['tbtp'] != 1 && $_SESSION['tbtp'] != 4) {
@@ -88,16 +76,32 @@ unset($_SESSION['nome_convidado']);
                         
                     }
                 }
-                echo "<table id='tb_fm'>";
-                    echo "<tr>";
-                        echo "<td>AAAAAAAAAAAA</td>";
-                        echo "<td>BBBBBBBBBBBB</td>";
-                    echo "</tr>";
-                    echo "<tr>";
-                        echo "<td>CCCCCCCCCCCC</td>";
-                        echo "<td>DDDDDDDDDDDD</td>";
-                    echo "</tr>";
-                echo "</table>";
+                $cont = 1;
+                while(isset($_SESSION["familia$cont"])){
+                    $x = 1;
+                    echo "<div id='tb_fm'>";
+                    while(isset($_SESSION["familia$cont"]["conv$x"])){
+                        $nome = $_SESSION["familia$cont"]["conv$x"];
+                        $convidado = $repositorio->VerificarConfirm($nome);
+                        foreach ($convidado as $key) {
+                            if($key['confirm'] == 1){
+                                $confirm = true;
+                            } else {
+                                $confirm = false;
+                            }
+                        }
+                        if($confirm == true){
+                            echo "<a>".$_SESSION["familia$cont"]["conv$x"]."  </a><a style='color: green; font-weight: bold'>CONFIRMADO</a>";
+                        } else {
+                            echo "<a>".$_SESSION["familia$cont"]["conv$x"]."</a>";
+                        }
+                        
+                        echo "<br>";
+                        $x++;
+                    }
+                    echo "</div>";
+                    $cont++;
+                }
             } else if($_SESSION['tbtp'] != 4) {
                 echo "<div id='tbl_msg'>";
                     echo "<a href='alt_tbl.php?tb='''>Ver mensagens dos Convidados</a>";

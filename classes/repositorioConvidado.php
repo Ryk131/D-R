@@ -18,6 +18,7 @@ interface IRepositorioConvidados {
     public function NumConv($conf);
     public function NumTot();
     public function PuxarMensagens();
+    public function VerificarConfirm($nome);
 }
  
 class RepositorioConvidadosMySQL implements IRepositorioConvidados
@@ -138,6 +139,13 @@ class RepositorioConvidadosMySQL implements IRepositorioConvidados
         $sql = "SELECT * FROM mensagens_convidados";
         $msgs = $this->conexao->executarQuery($sql);
         return $msgs;
+    }
+
+    public function VerificarConfirm($nome)
+    {
+        $sql = "SELECT * FROM tbl_convidados WHERE nome_convidado = '$nome'";
+        $conv = $this->conexao->executarQuery($sql);
+        return $conv;
     }
 }
    

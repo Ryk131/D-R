@@ -196,7 +196,7 @@ div > p > a:hover {
 
 #tb_fm {
     margin: auto;
-    width: 80vw;
+    width: 90vw;
     border: double 10px var(--cor2);
     border-radius: 4px;
     padding: 10px;
