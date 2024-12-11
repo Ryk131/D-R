@@ -130,13 +130,13 @@ if(isset($_SESSION['nome_convidado'])) {
                                 echo "<td>".$key['nome_convidado']."</td>";
                                 if($key['confirm'] == 0){
                                     echo "<td>Não Confirmado</td>";
-                                    echo "<td class='botao_conf'><a href='confirmar.php?nome=$nome'>Confirmar Presença</a></td>";
+                                    //echo "<td class='botao_conf'><a href='confirmar.php?nome=$nome'>Confirmar Presença</a></td>";//
                                 } else if($key['confirm'] == 1) {
                                     echo "<td>Confirmado</td>";
-                                    echo "<td class='botao_conf'><a href='desconfirmar.php?nome=$nome'>Desconfirmar Presença</a></td>";
+                                    //echo "<td class='botao_conf'><a href='desconfirmar.php?nome=$nome'>Desconfirmar Presença</a></td>";//
                                 } else {
                                     echo "<td>Desconfirmado</td>";
-                                    echo "<td class='botao_conf'><a href='confirmar.php?nome=$nome'>Reconfirmar Presença</a></td>";
+                                    //echo "<td class='botao_conf'><a href='confirmar.php?nome=$nome'>Reconfirmar Presença</a></td>";//
                                 }
                             echo "</tr>";
                         }
