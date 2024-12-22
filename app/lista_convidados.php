@@ -46,15 +46,15 @@ unset($_SESSION['nome_convidado']);
         <?php
             
             echo "<div id='tbls'>";
-                if($_SESSION['tbtp'] != 1 && $_SESSION['tbtp'] != 4) {
-                    echo "<p>Convidados Confirmados: ".$convidados_confirmados." <a href='alt_tbl.php?tb=1'>( Detalhes )</a></p>";
-                }
-                if($_SESSION['tbtp'] != 0 && $_SESSION['tbtp'] != 4) {
-                    echo "<p>Convidados Não Confirmados: ".$convidados_nconfirmados." <a href='alt_tbl.php?tb=0'>( Detalhes )</a></p>";
-                }
-                if($_SESSION['tbtp'] != 2 && $_SESSION['tbtp'] != 4) {
-                    echo "<p>Convidados Desconfirmados: ".$convidados_dconfirmados." <a href='alt_tbl.php?tb=2'>( Detalhes )</a></p>";
-                }
+                //if($_SESSION['tbtp'] != 1 && $_SESSION['tbtp'] != 4) {
+                //    echo "<p>Convidados Confirmados: ".$convidados_confirmados." <a href='alt_tbl.php?tb=1'>( Detalhes )</a></p>";
+                //}
+                //if($_SESSION['tbtp'] != 0 && $_SESSION['tbtp'] != 4) {
+                //    echo "<p>Convidados Não Confirmados: ".$convidados_nconfirmados." <a href='alt_tbl.php?tb=0'>( Detalhes )</a></p>";
+                //}
+                //if($_SESSION['tbtp'] != 2 && $_SESSION['tbtp'] != 4) {
+                //    echo "<p>Convidados Desconfirmados: ".$convidados_dconfirmados." <a href='alt_tbl.php?tb=2'>( Detalhes )</a></p>";
+                //}
                 echo "<p>Total de Convidados: ".$convidados;
                 if($_SESSION['tbtp'] != 3) {
                     echo "<a href='alt_tbl.php?tb=3'>( Detalhes )</a></p>";
@@ -121,15 +121,15 @@ unset($_SESSION['nome_convidado']);
                                 echo "<td>".$key['nome_convidado']."</td>";
                                 if($key['confirm'] == 0){
                                     echo "<td id='inf01'>NÃO CONFIRMADO</td>";
-                                    echo "<td><a href='confirmar.php?nome=$nome'>Confirmar Presença</a></td>";
+                                    //echo "<td><a href='confirmar.php?nome=$nome'>Confirmar Presença</a></td>";
                                 } else if($key['confirm'] == 1) {
                                     echo "<td id='inf01' style='color: rgb(28, 206, 28)'>CONFIRMADO</td>";
-                                    echo "<td><a href='desconfirmar.php?nome=$nome'>Desconfirmar Presença</a></td>";
+                                    //echo "<td><a href='desconfirmar.php?nome=$nome'>Desconfirmar Presença</a></td>";
                                 } else {
                                     echo "<td id='inf01'>DESCONFIRMADO</td>";
-                                    echo "<td><a href='confirmar.php?nome=$nome'>Reconfirmar Presença</a></td>";
+                                    //echo "<td><a href='confirmar.php?nome=$nome'>Reconfirmar Presença</a></td>";
                                 }
-                                echo "<td><a href='confirm_excl.php?nome=$nome'>Excluir Convidado</a></td>";
+                                //echo "<td><a href='confirm_excl.php?nome=$nome'>Excluir Convidado</a></td>";
                             echo "</tr>";
                         }
                     echo "</tbody>";
