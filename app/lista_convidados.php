@@ -91,10 +91,8 @@ unset($_SESSION['nome_convidado']);
                             }
                         }
                         if($confirm == true){
-                            echo "<a>".$_SESSION["familia$cont"]["conv$x"]."  </a><a style='color: green; font-weight: bold'>CONFIRMADO</a>";
-                        } else {
-                            echo "<a>".$_SESSION["familia$cont"]["conv$x"]."</a>";
-                        }
+                            echo "<a>".$_SESSION["familia$cont"]["conv$x"]."  </a>";
+                        } 
                         
                         echo "<br>";
                         $x++;
